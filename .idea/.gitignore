@@ -1,0 +1,19 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/.idea.vtouch-vanki.iml
+/contentModel.xml
+/projectSettingsUpdater.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Exclude Vim swap-files
+*.sw[m-p]
+
+# Exclude editor xml-files
+*.xml
