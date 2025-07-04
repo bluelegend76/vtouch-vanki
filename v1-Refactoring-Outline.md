@@ -1,8 +1,9 @@
     https://vimdoc.sourceforge.net/htmldoc/usr_41.html#41.9
     https://vim-jp.org/vimdoc-en/eval.html#exception-handling
 
-- [ ] Go for SPARSE mapping (=islands instead of larger blocks)
-- [ ] 
+- [ ] DEFAULT/CHANGE TO SPARSE KEY-MAPPINGS
+  - [ ] Go for SPARSE mapping (=islands instead of larger blocks)
+- [ ] CHANGE TO BUFFERS (INSTEAD OF TABS)
 
 - Basic clean-up and organization of code
   - upload spoof logo
@@ -33,6 +34,9 @@ Idea: =Sketch out|List Basic Functionality for the respective Apps, Name the fun
 ## vtd Tagging
 - [ ] G/J Activates/Reactivates Sentence-Highlight ****
 - [ ] one empty unhighlighted line at top (as padding)
+----
+- Dashify V-Marked ****
+- add comma after v-marked
  
 Quick-flip for 'do not break words at screen-edge'-mode
 --"-- for increasing/decreasing splitsize
