@@ -5,6 +5,9 @@
   - [ ] Go for SPARSE mapping (=islands instead of larger blocks)
 - [ ] CHANGE TO BUFFERS (INSTEAD OF TABS)
 
+Add support for opening images/soundfiles (etc) with cursor
+  on text/path [****]
+
 - Basic clean-up and organization of code
   - upload spoof logo
 
