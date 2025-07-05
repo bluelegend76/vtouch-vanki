@@ -4,6 +4,7 @@
 - [ ] DEFAULT/CHANGE TO SPARSE KEY-MAPPINGS
   - [ ] Go for SPARSE mapping (=islands instead of larger blocks)
 - [ ] CHANGE TO BUFFERS (INSTEAD OF TABS)
+- Add 'normal!'-Mode
 
 Add support for opening images/soundfiles (etc) with cursor
   on text/path [****]
