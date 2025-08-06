@@ -1,6 +1,9 @@
     https://vimdoc.sourceforge.net/htmldoc/usr_41.html#41.9
     https://vim-jp.org/vimdoc-en/eval.html#exception-handling
 
+- [ ] Possible Big TODO: CREATE NVIM/LUA-VERSION
+
+
 - [ ] DEFAULT/CHANGE TO SPARSE KEY-MAPPINGS
   - [ ] Go for SPARSE mapping (=islands instead of larger blocks)
 - [ ] CHANGE TO BUFFERS (INSTEAD OF TABS)
