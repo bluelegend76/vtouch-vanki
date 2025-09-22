@@ -38,7 +38,8 @@ Idea: =Sketch out|List Basic Functionality for the respective Apps, Name the fun
 
 ## vanki Car
 
-## vtd Tagging
+## ~/repos/vtouch-vanki/vtd.tagging.vim
+- [ ] SEARCH FOR V-MARKED, + REPLACE REPLACE BLANKS IN THE MIDDLE WITH A DASH
 - [ ] G/J Activates/Reactivates Sentence-Highlight ****
 - [ ] one empty unhighlighted line at top (as padding)
 ----
