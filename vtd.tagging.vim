@@ -1,4 +1,5 @@
 " ~/Dropbox/bin/scripts/va/vtd.tagging.vim
+" vim:fdm=marker:
 "	~/Dropbox/bin/scripts/va/tmp/vtd.tagging.orig.vim
 " /storage/emulated/0/va/inits/vtd.tagging.vim
 
@@ -90,6 +91,8 @@ vnoremap 9 <nop>
 " vnoremap 0 <nop>
 
 " }}}
+
+nnoremap 7 :colors <c-d>
 
 set hlsearch
 " ------- aux (=numpad) -------
