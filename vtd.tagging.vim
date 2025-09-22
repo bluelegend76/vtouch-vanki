@@ -91,6 +91,7 @@ vnoremap 9 <nop>
 
 " }}}
 
+set hlsearch
 " ------- aux (=numpad) -------
 
 " save  (=1(!!))
@@ -99,15 +100,24 @@ nnoremap 1 :up
 " aux Esc
 vnoremap 3 l
 " vnoremap 3 ? \\|^\zs[^ ]    W-T-F!????
-  vnoremap W l
-  vnoremap E l
-  vnoremap R l
-  vnoremap S l
-  vnoremap D l
-  vnoremap F l
+ " vnoremap W l
+ " vnoremap S l
+ " vnoremap E l
+ " vnoremap D l
+ " vnoremap R l
+ " vnoremap F l
   "--
   vnoremap P l
   vnoremap Ö l
+
+inoremap zz <Esc>
+inoremap Zz <Esc>
+inoremap ZZ <Esc>
+inoremap zx <Esc>
+inoremap Zx <Esc>
+inoremap ZX <Esc>
+
+noremap tt zt
 
 " join line w. next (!!)
 " nnoremap 4 :join
@@ -116,12 +126,16 @@ vnoremap 3 l
 nnoremap 5 visozt
 nnoremap 6 visozt
 " v-Mark next(!) Sentence + zt
+  " vnoremap G )visozt
   vnoremap Y )visozt
-  vnoremap U )visozt
-  vnoremap I )visozt
   vnoremap H )visozt
+  vnoremap U )visozt
   vnoremap J )visozt
+  vnoremap I )visozt
   vnoremap K )visozt
+  vnoremap V )visozt
+  vnoremap B )visozt
+  vnoremap M )visozt
 " v-mark prev.(!) sentence
 vnoremap 5 (visozt
 
@@ -135,7 +149,8 @@ nnoremap 8 gt
 vnoremap 9 "+y
 
 " aux  (=or g;)
-nnoremap 0 
+" nnoremap 0 
+nnoremap 0 :set hlsearch!<CR>
 
 
 " ------- Main (=Keys) -------
@@ -155,13 +170,14 @@ nnoremap K bitk@
 nnoremap F bif@
 
 " Capitalize word's tags(!!)
-nnoremap C ma/[^ ]\ze \\|$F@mtviW`tU`a
+nnoremap C ma/[^ ]\ze \\|$F@mtviW`tU`a:nohlsearch:up
 
 " aux Redo|Undo
 nnoremap Å 
 vnoremap Å gv
 nnoremap Ä u
 vnoremap Ä ugv
+nnoremap OO gv
 
 " change letter of last added tag
 nnoremap r hr
@@ -203,20 +219,29 @@ nnoremap qf :tabedit /storage/emulated/0/va/rsc/bmks/
 
 
 " reactivate last v-mark
-nnoremap 00 gv
+nnoremap OO gv
+" Back to top of paragraph
+vnoremap 1 <Esc>{<CR>ztviso
 
 " format paragr. acc. to text-width (etc)
 " nnoremap 00 /^\s-oi0gqap{dd:up
-vnoremap OO /^\s-oi0gqap{dd:upgvzt
-vnoremap O gqap:upgvzt
+" vnoremap OO /^\s-oi0gqap{dd:upgvzt
+" vnoremap O gqap:upgvzt
+vnoremap GG /^\s-oi0gqap{dd:up:nohlsearch<CR>gvzt
+vnoremap G gqap:upgvzt
+" format source-code
+nnoremap O =iB
 " remove blank bef. next paragr.
 " vnoremap 6 }ddgqap:upgviszt
 vnoremap 6 }dd``visoztgq:upgv
+vnoremap A o<Esc>o<Esc>gvo
 
 " Default-tag v-Marked(!!)
-vnoremap N in@:upgv
+vnoremap N iN@:upgv
 
 vnoremap Q iQ@:upgv
-vnoremap C iQ@:upgv
 vnoremap T iT@:upgv
+
+vnoremap D o<Esc>f x:up<CR>gvo
+" vnoremap C d:up<CR>gv
 
