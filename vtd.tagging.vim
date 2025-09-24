@@ -94,8 +94,18 @@ vnoremap 9 <nop>
 
 " }}}
 
-" TODO
-" SPARSE KEYMAPS
+" TODO:
+" SPARSE OUT KEYMAPS
+" ADD 'nnoremap G (and J)' TO ACTIVATE VMARK VIA 'vis'
+" Add 'normal!'-Mode Override
+" - [ ] SEARCH FOR V-MARKED, + REPLACE REPLACE BLANKS IN THE MIDDLE WITH A DASH
+" - add comma after v-marked
+" ### [ ] one empty unhighlighted line at top (as padding)
+" Quick-flip for 'do not break words at screen-edge'-mode
+" --"-- for increasing/decreasing splitsize
+" --"-- FOR INCREASING/DECREASING FOLDLEVEL
+" Folding-commands on non-folded line:
+"   = Go to next fold (instead of just showing error-message)
 
 nnoremap 7 :colors <c-d>
 
