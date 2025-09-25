@@ -1,0 +1,60 @@
+
+ TESTING (!!!!/****)
+   =Testing and Clearing
+   (for 'out of pocket/on the road' ref-work(**!!))
+   with following Doks|Project-Areas(****):
+ 
+ - Vim Uman (etc??)  [has to clean and input First Papernotes(!!)]
+ - Dlang(Ali)  [[ --"-- ]]
+ - *Lilypond (=learning, +then notation | extending)
+ - *LPY 3*
+   - Freec(?/(**))
+ - writer / calc / excel / Starb.  (**(*))
+ -----
+ -----
+ - (+special case:) Vim: Ex // Funct.s (*)
+ 
+
+
+--- aux ---
+
+reactivate last v-mark			1
+ save (:up)						3
+split line (at next blank)		5
+New Vankifold **
+  (=copy old)					7
+delimit vanki-blocks			8
+format paragr.
+  (=acc. to text-width)			0
+
+search next a@ (=tagged)		q5
+'repos' (=find extdok-pos.)		q1
+v-mark to 'cloze-del'			qw
+
+
+---- Main ----
+
+Next Word				E D  (+maybe R F)
+ start v-mark/
+ /v-incl. next w		space
+Next Paragr.			Z X
+ --
+Yank (to '+')			Q A
+Paste (va-Deck) *		T G
+ open/close fold		 V B
+
+ next tab (*)			 U J
+ esc(!)					 O L
+ --
+ --
+ (up/back paragr.		 just use '{')
+
+
+---- quote/surround v-marked
+
+	q1				'
+	q2				"
+	q3				(
+	q4				[
+	q5				<
+

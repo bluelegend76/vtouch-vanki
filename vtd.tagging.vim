@@ -95,10 +95,12 @@ vnoremap 9 <nop>
 " }}}
 
 " TODO:
+" (GENERAL: Include Doc-pngs into top repo) __
 " SPARSE OUT KEYMAPS
 " ADD 'nnoremap G (and J)' TO ACTIVATE VMARK VIA 'vis'
 " Add 'normal!'-Mode Override
 " - [ ] SEARCH FOR V-MARKED, + REPLACE REPLACE BLANKS IN THE MIDDLE WITH A DASH
+" Two key-maps: dashify next; dashify previous
 " - add comma after v-marked
 " ### [ ] one empty unhighlighted line at top (as padding)
 " Quick-flip for 'do not break words at screen-edge'-mode

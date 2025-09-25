@@ -1,0 +1,274 @@
+
+TODO:
+  - Add latest Improvement Notes
+  - add (n)TT|(n)ZT to z4(=VankinotesTaking) = Set line to top
+   - add ZS (=insert '(sss)' for 'see more') to z2 (=Review)
+  - ucase Shortcut for dragging v-marked words forwards|back in line ****
+  - ucase Shortcut for quick-Converting 'q ; a'-style line to Full Complete VankiFold ****(!!)
+
+
+=== vta.multilines.vim ===  z1
+=== vta.review.vim ===  z2
+   (=== vta.review-car.vim (???? (=new(!!))) )
+z4 === vtd.reftxt2vankinotes.vim ===# add 'Zz' = Esc
+z5 === vt.shorthtranscrib.vim ===
+=== vtd.tagging.vim ===  z6
+=== vtd.svsyndb-tag.vim ===  z7
+=== vtd.dualist.vim ===  z8
+
+
+-------------------------
+~/Dropbox/bin/scripts/va/
+-------------------------
+
+## text up | down    (=c-e | c-y)
+    # ='reveal text down | up' // 'view down | up'
+Factor Out: gg, tt, n|v:zz|ZZ   Qq[??](= ':norm! ')
+Newer Idiom: Clear Whole Rev-Maps %
+ =multilines, review, car %
+
+
+    ## aux 'n' + 'zt - 1'
+    === vta.multilines.vim ===  z1
+    # =basic shuffle-review(**)
+save                3|4
+del. post           6|7
+ vmark line         vv
+reset pract.block   00
+ripple-reset block  09
+    # =reset + go to next
+--
+show | hide q.      TYU.GHJ
+q. up | down        WE.SD | OP.LÖ
+text up | down      ZXC | BNM
+    #(!!: Factor Out(!))
+--
+ tag '@'              q1
+ tag '@@'             q2
+ tag '@@(@)'          q3
+highl. @-tagged      qs *
+reset hl.            0
+    .
+    .
+    === vta.review.vim ===  z2
+save                3
+reset pract.block   00
+ripple-reset block   09
+----
+show | hide q.      TYU.GHJ
+ speedreview(*)      QWE.ASD
+next post + c-e     OPÅ.LÖÄ
+ text up | down      ZXC | BNM
+--
+ tag '@'              q1
+ tag '@@'             q2
+ tag '@@(@)'          q3
+highl. @-tagged      qs *
+reset hl.            0
+    .
+    .
+    === vta.car.vim ===  z3
+save                5 @
+ to prev. q. *(!)    4 @@(@)
+del. q+a            7
+ reset pract.block   00
+ ripple-reset block  09
+vmark line          6
+----
+show | hide q.      H
+q. up | down        U | K
+ undo                C
+--
+ tag '@'              OO
+ tag '@@'             O8
+ tag '@@(@)'          OP
+highl. @-tagged      qs *
+    # (=Set to Other(????))
+reset hl.            0
+    .
+    .
+       (=== vta.review-car.vim (???? (=new(!!))) )
+
+
+    z4
+    === vtd.reftxt2vankinotes.vim ===# add 'Zz' = Esc
+*** *** ***  = Dec 2021 - Jan 22                                                        *** *** ***
+*** TODO: Possible|Desirable to Implement 'nu + Linewise Visual Mode' on|off + move up|down(!!) ***
+*** *** ***                                                                             *** *** ***
+# Refact|Del(??): ZX (=next paragr.(??))  %
+    ## nohlsearch, foldmethod=marker
+    # base editing(!!): space(=mark), (ED),  QA, T(**), 
+save                3
+split l. | join **  5 | 55
+vmark line          vv
+    # (v + v_V)
+ '/' next a@-tag **  q5  [!!!!]
+open DECK.MASTER *  qed
+ find extdok-string (eg. fr. pdf|web) in txt ref-file    qs
+    # searches '+'-string in txt-ref
+ --
+format paragr.(!)   O   # n|v-mode
+'remove stairstep'  OO  ## * n|v-mode
+(v)del. next blank
+  line + gq **      6
+----
+vmarked to cloze *  qw
+--
+  open next f.       U
+  close f. + Ent     VB
+new VankiFold *     7  (%)
+    #Refac(??|!): add zm first[!!]
+new VankiBlock *    8
+    #=delimit + new block
+bump refdok pgnr    qd
+vmark megablocks    mm(line 1) + vmark bot. + 1
+ (v)Ent                 T
+    #(=reset|Refact(!!))
+vmark n.|prev. sent.    W | S *****
+    #+zt
+ paste l.s + indent     G
+    #=Refac(!! =dont have to 'GYI'++++ for blocks(!!))
+ > / < line ***        II | YY
+ > last pasted l.s *   YI
+ --
+fr. open a-fold  =star prev. q-line: (**(*))
+    @           q1
+    @@          q2
+    @@(@)       q3
+star-tag lines: *
+    *           å0
+    **          åå
+    **(*)       å9
+    (??)        å8
+    (!)         å6
+    (!!)        å7
+ --
+## consist. format for inner a-block(!!)          qf
+    #[=MAY BE REDONE W. ADVANC. REFACT. 2021+(!!)]
+----
+insert ' 'blank l.      ZZ
+ins. pure(!) blank l.   zz
+    #=New(!! =Refactor)
+vmark 'back'    B (**)
+down | up       J | K
+ undo           M
+del. line       DD
+[del. | edit vmarked   X | C]
+ aux. 'n'       ÅÄ
+    .
+    .
+    z5
+    === vt.shorthtranscrib.vim ===
+# ic, hlsearch, incsearch
+to top ref 1|2      1, 2
+--
+save                4
+:nohlsearch         0
+*** TODO: Line to top of screen  space  ***
+***       Vmark Next W     double-space ***
+***              B       bump line + z-mark
+***      set default jump-mark to other than m(!!)
+***      Make 'O' run 'zt'(!)           ***
+Vmark Next W.       space
+----
+yiw + search k.      W
+(v)search k.        V   #+=fragm.(!)
+(v)exact search k.  X **
+yank curs. k-line   Y (!)
+/: find k-string    K *
+ [word-end mark      M ]
+ [w-end key-box      A ]   # '[]'
+ [w.e. custom key    Ä ]   # '[[]]'
+jump back           O
+ [(v) pull k-string (=directly)  D ]
+--
+Load refblock       R
+    # /storage/emulated/0/Download/refsteno-
+    .
+    .
+    === vtd.tagging.vim ===  z6
+save                1
+vesc(+'l')          3
+ (n)gv               00
+ --
+(v)format paragr.   0     # +:up
+(v)'no stairsteps'  1 **  # +:up
+ (v)del. next blank line(!)   6
+gt                  8
+(yank vmarked to '+'   9 )
+----
+vmark sent. *             5|6
+    (v)vm to prev. sent.     5
+(v) next sent.(!)   YUI.HJK
+ (v)Tag=N          N
+ (v)Tag=T          T
+ (v)Tag=Q *        Q ; C
+Undo | Redo (!)     Ä | Å
+    #'äh!/åter'
+--
+vesc(+'l')        WER.SDF ; PÖ
+    # prep. for nmode tagging
+ vmark w. | next w. (!)     space
+(n)to prev|next tagged *    q1 | q2
+[basic n-tags
+    N, T, U, P,  Q, A,
+     (=n, t, u, P,  Q, A)
+    H, M,  E=te, I=ti(p), K=tk(*), F
+ucase w.tags        C
+r last tagletter    r
+rep. w.s tag *      R
+--
+ (n)to next|prev. paragr.   cv | qq
+    #+zt
+(n)list bmk-rsc-files      qf
+    .
+    .
+    === vtd.svsyndb-tag.vim ===  z7
+save                3|4
+split long line     6|7  # next ' ' = '@@\n@@'
+ vmark line         9
+(n)clear hls        0
+----
+ent + scroll 1 l.   space
+vmark next w. (**)  QW.AS
+tag Fun         F
+tag Usef        U
+tag New         N
+    # (=learning)
+tag Etym|Expln. E
+tag Hm          H
+    # (=includ. 'Mistake')
+tag Post        P
+    # (=whole post|concept (eg. 'absolut'))
+    .
+    .
+-------------------------------------
+Ny Temp(**(!!)): mute-reftagging(=2021++)
+    (=tag txt mutereflist w. simple _1, _2 etc-tags (=for simple break apart-filtering 2021 ++(!!)))
+-------------------------------------
+
+
+    === vtd.dualist.vim ===  z8
+    # nohlsearch, foldmethod=marker
+# New!  transpose word(!!)   #=for rearr.ing '_tag'-order  (=for searching multitags)
+--
+save                   3
+ top of paragr. + zt    1
+to prev.|next list    5 | 6
+item(s) to prev.||next list  55 | 66
+  .
+  #[!!] N | n          7|8
+----
+V | Vesc **         space
+--
+curs.line up | dn.  QA  |  UJ
+vl.mark up | dn.     ED | TG
+ vmode o             0
+view up | down      ZX | VB
+ .
+   .
+ #[!!] vmarked up|dn.  OL | ÅÄ
+   .
+(!!) line-hlsearch _tagged ((****))  qq|q1 (?????(!!!!!))
+
+

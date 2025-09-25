@@ -1,0 +1,12 @@
+" F = fun|kul				#politruk/småpåve
+" U = useful|användbar	#totalitär
+" N = new! (=learning)	# mankemang
+" E = etym|explan			#tymplig (etc)
+" H = hmm|questionable	#'Mistakes??' | Check | Corrections (etc)
+" (P = Post|post			 #'absolut'   =hela posten(!) )
+"   bif@   fun
+"   biu@   useful
+"   bin@   new (=learning/prev. unknown)
+"   bie@   etym/explain
+"   bih@   hmm =check for correctness
+"   bip@   post  (=entire word-post, like 'absolut')
