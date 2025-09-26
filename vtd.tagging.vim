@@ -112,6 +112,8 @@ vnoremap 9 <nop>
 " Folding-commands on non-folded line:
 "   = Go to next fold (instead of just showing error-message)
 
+let @s='\zs( |\n\s*)\ze'
+
 nnoremap 7 :colors <c-d>
 
 set hlsearch
