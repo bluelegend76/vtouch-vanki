@@ -42,7 +42,7 @@ Idea: =Sketch out|List Basic Functionality for the respective Apps, Name the fun
 - [ ] one empty unhighlighted line at top (as padding)
 ----
 - Dashify V-Marked ****
-- add comma after v-marked
+- add comma after v-marked,
  
 Quick-flip for 'do not break words at screen-edge'-mode
 --"-- for increasing/decreasing splitsize
