@@ -1,4 +1,5 @@
 " /storage/emulated/0/vimanki_svsyndbtag.vim
+" vim:sw=2:fdm=marker:
 "   Tag SvsynDb-words
 
 " TODO TODO !!!!!!!!!!!!!!! :  Finish + Start to Test vimanki_shorthtranscrib.vim (!!!!! (*******) )  *****
@@ -16,29 +17,29 @@ set hlsearch
 " :nohlsearch
 " g; (??)
 " auxilliary (=numberpad)
-	" Save file (*!)
+    " Save file (*!)
 nnoremap 3 :up
 nnoremap 4 :up
 " Split Long Lines (+leave mark for Undoing (**))
-	" Split Line (=for readability)
+    " Split Line (=for readability)
 nnoremap 6 f,f s@@0@@
 nnoremap 7 f,f s@@0@@
-	" V-mark line
+    " V-mark line
 nnoremap 9 V
-	" clear hlsearch
+    " clear hlsearch
 nnoremap 0 :nohlsearch
 
 
 nnoremap <space> 
 
 " main (=keyspad) ------ 
-	" TAG: =QUICK-TAGGING OF WORDS
-" F = fun|kul				#politruk/småpåve
-" U = useful|användbar	#totalitär
-" N = new! (=learning)	# mankemang
-" E = etym|explan			#tymplig (etc)
-" H = hmm|questionable	#'Mistakes??' | Check | Corrections (etc)
-" (P = Post|post			 #'absolut'   =hela posten(!) )
+    " TAG: =QUICK-TAGGING OF WORDS
+" F = fun|kul               #politruk/småpåve
+" U = useful|användbar  #totalitär
+" N = new! (=learning)  # mankemang
+" E = etym|explan           #tymplig (etc)
+" H = hmm|questionable  #'Mistakes??' | Check | Corrections (etc)
+" (P = Post|post             #'absolut'   =hela posten(!) )
 "   bif@   fun
 "   biu@   useful
 "   bin@   new (=learning/prev. unknown)
@@ -60,7 +61,7 @@ nnoremap P :normal F,wip@
 " /[,;] \zs[^,]\{-}\ze,  #=next wordblock
 " :nohlsearch
 " vf,ge
-	" NEXT: =NEXT WORD + HIGHLIGHT(!)
+    " NEXT: =NEXT WORD + HIGHLIGHT(!)
 " TODO:
 "  - activate all four buttons
 "  - use simple 'w-forw.' instead of v-mark etc

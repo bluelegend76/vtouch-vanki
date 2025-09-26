@@ -1,12 +1,14 @@
 " ~/Dropbox/bin/scripts/va/vtd.tagging.vim
-" vim:fdm=marker:
+" vim:sw=2:fdm=marker:
+" ~/RiderProjects/vtouch-vanki/doc/Tagging.xcf
+" ~/RiderProjects/vtouch-vanki/doc/Tagging.png
 " TODO
 
-"	~/Dropbox/bin/scripts/va/tmp/vtd.tagging.orig.vim
+"   ~/Dropbox/bin/scripts/va/tmp/vtd.tagging.orig.vim
 " /storage/emulated/0/va/inits/vtd.tagging.vim
 
 " Resetting / Blanking the Keyboard {{{
-	" orig. = comment away keys used in the script
+    " orig. = comment away keys used in the script
 " New   = reactivate keys needed/used in the script
 
 "------- NOPS -------- (=deadkeys)
@@ -95,12 +97,13 @@ vnoremap 9 <nop>
 " }}}
 
 " TODO:
-" (GENERAL: Include Doc-pngs into top repo) __
 " SPARSE OUT KEYMAPS
 " ADD 'nnoremap G (and J)' TO ACTIVATE VMARK VIA 'vis'
 " Add 'normal!'-Mode Override
 " - [ ] SEARCH FOR V-MARKED, + REPLACE REPLACE BLANKS IN THE MIDDLE WITH A DASH
+" vnoremap V
 " Two key-maps: dashify next; dashify previous
+"   = 
 " - add comma after v-marked
 " ### [ ] one empty unhighlighted line at top (as padding)
 " Quick-flip for 'do not break words at screen-edge'-mode

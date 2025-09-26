@@ -1,19 +1,21 @@
 " /storage/emulated/0/vimanki_multilines.vim
+" vim:sw=2:fdm=marker:
+" ~/RiderProjects/vtouch-vanki/doc/vanki_Multiline-BetterUndo--AddFuncts.png
 
 set foldmethod=marker | nnoremap <space> za
 
 "------- MAPS -------
 
 " auxilliary (=numberpad)
-	" Back to previous a-line (=fold)
+    " Back to previous a-line (=fold)
 nnoremap 1 zmzk-ztzj2
-	" Save file (*!)
+    " Save file (*!)
 nnoremap 3 :up
 nnoremap 4 :up
-	" Delete post
+    " Delete post
 nnoremap 6 zm-2ddzj
 nnoremap 7 zm-2ddzj
-	" V-mark line
+    " V-mark line
 vnoremap v V
     " Reset Practice-block
 "nnoremap 0 dd}-p#dd{p<<<<>>ztzj
@@ -27,28 +29,28 @@ nnoremap qs :setlocal hlsearch/.*@.\=$
 nnoremap 0 :setlocal nohlsearch
 
 " main (=keyspad) ------ 
-	" OPEN: show/hide post
+    " OPEN: show/hide post
 nnoremap T za
 nnoremap Y za
 nnoremap U za
 nnoremap G za
 nnoremap H za
 nnoremap J za
-	" TO TOP: line/post to 'again'-block (*)
+    " TO TOP: line/post to 'again'-block (*)
 nnoremap W zm-2dd?\v^\s*\zs-{4}Pzmzj2:up
 nnoremap E zm-2dd?\v^\s*\zs-{4}Pzmzj2:up
 nnoremap S zm-2dd?\v^\s*\zs-{4}Pzmzj2:up
 nnoremap D zm-2dd?\v^\s*\zs-{4}Pzmzj2:up
-	" TO BOTT: line/post to 'later'-block (*)
+    " TO BOTT: line/post to 'later'-block (*)
 nnoremap O zm-2dd}Pzmzjzt5:up
 nnoremap P zm-2dd}Pzmzjzt5:up
 nnoremap L zm-2dd}Pzmzjzt5:up
 nnoremap Ö zm-2dd}Pzmzjzt5:up
-	" SHOW UP: line/post ztto 'later'-block (*)
+    " SHOW UP: line/post ztto 'later'-block (*)
 nnoremap Z 
 nnoremap X 
 nnoremap C 
-	" SHOW DOWN: line/post to 'later'-block (*)
+    " SHOW DOWN: line/post to 'later'-block (*)
 nnoremap B 
 nnoremap N 
 nnoremap M 

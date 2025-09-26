@@ -1,12 +1,15 @@
+" vim:sw=2:fdm=marker:
+" ~/RiderProjects/vtouch-vanki/doc/Reftxt2Vankinotes.xcf
+" ~/RiderProjects/vtouch-vanki/doc/Reftxt2Vankinotes.png
 
 " TESTING (!!!!/****)
 " prev.script as Reference: ~/Dropbox/bin/scripts/va/vt.shorthtranscrib.vim
-"							~/Dropbox/bin/scripts/va/vta.multilines.vim
+"                           ~/Dropbox/bin/scripts/va/vta.multilines.vim
 
 " TODO: BLANK OUT VMAPS FOR KEYBOARD(S) ALSO (!!)
 "   OR!! vunmap (!!)
 " Resetting / Blanking the Keyboard {{{
-	" orig. = comment away keys used in the script
+    " orig. = comment away keys used in the script
 " New   = reactivate keys needed/used in the script
 
 "------- NOPS -------- (=deadkeys)
@@ -93,11 +96,11 @@ vnoremap 9 <nop>
 " vnoremap 0 <nop>
 
 " }}}
-"			(+some settings??  (=nohlsearch etc??))
+"           (+some settings??  (=nohlsearch etc??))
 set nohlsearch
 set foldmethod=marker
-	" set textwidth =30?? (=some number good for very small viewport)
-	"					+||also set @g or the like to 'gqap' (etc)
+    " set textwidth =30?? (=some number good for very small viewport)
+    "                   +||also set @g or the like to 'gqap' (etc)
 
 "some old|new basics
 nnoremap gg g;
@@ -150,7 +153,7 @@ vnoremap 6 }dd``:upvisoztgqgv
 nnoremap q5 /\v<\a+\@
 " 'repos': =find extdok-pos. in the txt ref-file(!!)
 nnoremap qs "+pu/+<BS>
-		" +add gg || :1 first(??)
+        " +add gg || :1 first(??)
 " v-marked to '____' =cloze-del(!)
 vnoremap qw "+ygvc____
 
@@ -262,7 +265,7 @@ nnoremap U zjza
 
 
 " ---- quote/surround v-marked ----
-"	(surround w: ', ", (, [, or <)
+"   (surround w: ', ", (, [, or <)
 vnoremap q1 `<i'`>lm>a'm>
 vnoremap q2 `<i"`>lm>a"m>
 vnoremap q3 `<i(`>lm>a)m>
@@ -299,12 +302,12 @@ vnoremap 3 ygt/"
 " aux n (=Next Search-Match)
 vnoremap Å n
 vnoremap Ä n
-	"	+use gg 'Next' | qa(=) | aux 1 + Next  (to restart)
+    "   +use gg 'Next' | qa(=) | aux 1 + Next  (to restart)
 
 " aux u
 nnoremap M u
 
-	"pre: mm + v-mark until last word
+    "pre: mm + v-mark until last word
 " Save v-marked block to valoud-tmpfile (**)
 vnoremap 5 :w /storage/emulated/0/va/rsc/listen/0vdoctmp.txt
 

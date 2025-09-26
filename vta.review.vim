@@ -1,9 +1,12 @@
 " /storage/emulated/0/vimanki_multilines.vim
+" vim:sw=2:fdm=marker:
+" ~/RiderProjects/vtouch-vanki/doc/vanki_review-QReview2.png
+"   ~/RiderProjects/vtouch-vanki/doc/vanki_review-QReview.png
 
 set foldmethod=marker | nnoremap <space> zt
 
 " Resetting / Blanking the Keyboard {{{
-	" orig. = comment away keys used in the script
+    " orig. = comment away keys used in the script
 " New   = reactivate keys needed/used in the script
 
 "------- NOPS -------- (=deadkeys)
@@ -103,7 +106,7 @@ nnoremap tt zt
 " auxilliary (=numberpad)
 " back one q
 nnoremap 4 zk2-zt2
-	" Save file (*!)
+    " Save file (*!)
 nnoremap 3 :up
     "
 " Refact: 'reset vanki-block'
@@ -116,20 +119,20 @@ nnoremap qs :setlocal hlsearch/.*@.\=$
 nnoremap 0 :setlocal nohlsearch
 
 " main (=keyspad) ------ 
-	" OPEN/CLOSE: show/hide post
+    " OPEN/CLOSE: show/hide post
 nnoremap E za
 nnoremap R za
 nnoremap T za
 nnoremap D za
 nnoremap F za
 nnoremap G za
-	" 'quickreview' (=view next a. directly)
+    " 'quickreview' (=view next a. directly)
 "nnoremap Q zmzj--ztzjzo
 nnoremap Q zmzj--ztzjzo
 nnoremap W zmzj--ztzjzo
 nnoremap A zmzj--ztzjzo
 nnoremap S zmzj--ztzjzo
-	" NEXT Q:
+    " NEXT Q:
 nnoremap Y zmzj--ztzj
 nnoremap U zmzj--ztzj
 nnoremap I zmzj--ztzj
@@ -137,17 +140,17 @@ nnoremap H zmzj--ztzj
 nnoremap J zmzj--ztzj
 nnoremap K zmzj--ztzj
 
-	" Flip ltr/rtl:
+    " Flip ltr/rtl:
 nnoremap O :setlocal rightleft!
 nnoremap P :setlocal rightleft!
 nnoremap L :setlocal rightleft!
 nnoremap Ö :setlocal rightleft!
 
-	" SHOW UP: line/post to 'later'-block (*)
+    " SHOW UP: line/post to 'later'-block (*)
 nnoremap Z 
 nnoremap X 
 nnoremap C 
-	" SHOW DOWN: line/post to 'later'-block (*)
+    " SHOW DOWN: line/post to 'later'-block (*)
 nnoremap B 
 nnoremap N 
 nnoremap M 

@@ -1,4 +1,6 @@
 " /storage/emulated/0/vimanki_shorthtranscrib.vim
+" vim:sw=2:fdm=marker:
+" ~/RiderProjects/vtouch-vanki/doc/vanki_shorthtranscrib_ADD-ÄX.png
 " Transcribe Text loaded along w. shorthand ref.list(**)  #='ontheroad'
 
 " Reset/Blanking 'reverse keyb.' {{{
@@ -65,20 +67,20 @@ set incsearch
 "------- MAPS -------
 
 " auxilliary (=numberpad)
-	" g; (??)
+    " g; (??)
 nnoremap 1 /-- refstart 1:nohlsearchzt3
 nnoremap 2 /-- refstart 2:nohlsearchzt3
-	" Save file (*!)
+    " Save file (*!)
 " nnoremap 3 :up
 nnoremap 4 :up
 " Split Long Lines (+leave mark for Undoing (**))
-	" Split Line (=for readability)
+    " Split Line (=for readability)
 " nnoremap 6 f,f s@@0@@
     "MAYBE: g; (****)
 " nnoremap 7 f,f s@@0@@
-	" V-mark line
+    " V-mark line
 " nnoremap 9 V
-	" clear hlsearch
+    " clear hlsearch
 nnoremap 0 :nohlsearch
 
 
@@ -88,53 +90,53 @@ nnoremap 0 :nohlsearch
 nnoremap <Space> viwmm
 vnoremap <Space> /\v<[A-ZÅÄÖa-zåäö]:nohlsearchvemm
 
-"??	vmark word
-	"
+"?? vmark word
+    "
 " - Searchprompt (/) as quickfunction
-	" nnoremap ??<space??> mm/-- refstart/\C  \zs
+    " nnoremap ??<space??> mm/-- refstart/\C  \zs
 " wordcut + search
-	nnoremap W "syiwemm/-- refstart/s
+    nnoremap W "syiwemm/-- refstart/s
 " vis-cut + search
-	" vnoremap V mm"sy`m/-- refstart/s
-	vnoremap V bemmgv"sy/-- refstart/s
+    " vnoremap V mm"sy`m/-- refstart/s
+    vnoremap V bemmgv"sy/-- refstart/s
 " vis-cut + eXact search (*)
-	vnoremap X bemmgv"sy/-- refstart/^\ss  
+    vnoremap X bemmgv"sy/-- refstart/^\ss  
 " search key/answer-string(**)
-	nnoremap K mm/-- refstart/\C  \zs
+    nnoremap K mm/-- refstart/\C  \zs
 " mark word-ending  #+perhaps add `` (=mark + pull back to exact pos.)
-	nnoremap M mcemm`c
+    nnoremap M mcemm`c
 " back  #(keep '0' as nohlsearch)
-	nnoremap O `mzt
+    nnoremap O `mzt
 " yank k-line + return and paste
-	nnoremap Y "yyy'mp`mzt/  /e+1d0/  d$v0"kydd`mzta[k]
-	"  yy'mp`m3   =orig
+    nnoremap Y "yyy'mp`mzt/  /e+1d0/  d$v0"kydd`mzta[k]
+    "  yy'mp`m3   =orig
 " pull k-string directly  (for v-marked)
-	vnoremap D mm"sy`m/-- refstart/^\s*\zssyy'mp/  /e+1d0/  d$v0"kydd`mzta[k]
+    vnoremap D mm"sy`m/-- refstart/^\s*\zssyy'mp/  /e+1d0/  d$v0"kydd`mzta[k]
 " orig-draft (=for debugging) {{{
-"	mm"sy`m/^\s\+\zss
-"	 - copy shorth. keystring-line
-"	yy
-"	 - pull  back + paste line
-"	'mp
-"	 - del. to double blank + f' ' + d$
-"	/  /e+1d0/  d$
-"	 - cut string + del. line
-"	v0"kydd
-"	 - back to mark m + append [k]
-"	`mzt3a[k]
+"   mm"sy`m/^\s\+\zss
+"    - copy shorth. keystring-line
+"   yy
+"    - pull  back + paste line
+"   'mp
+"    - del. to double blank + f' ' + d$
+"   /  /e+1d0/  d$
+"    - cut string + del. line
+"   v0"kydd
+"    - back to mark m + append [k]
+"   `mzt3a[k]
 " }}}
 " open k-string-brackets (at end of word)
-		" E-->A
-	nnoremap A hea[]i
+        " E-->A
+    nnoremap A hea[]i
 " open double brackets(=custom) k-string at end
-	nnoremap Ä hea[[]]hi
+    nnoremap Ä hea[[]]hi
 " load ref-block into the text
-		" L-->R
-	nnoremap R :read /storage/emulated/0/Download/refsteno-
+        " L-->R
+    nnoremap R :read /storage/emulated/0/Download/refsteno-
 "" optional: tab/cn-completion for loading filename
-	" cnoremap Z 
-				  " tab: 	
-				  " c-n: 
+    " cnoremap Z 
+                  " tab:    
+                  " c-n: 
 
 
 

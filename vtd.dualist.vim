@@ -1,13 +1,14 @@
+" vim:sw=2:fdm=marker:
 
 " TESTING (!!!!/****)
 " prev.script as Reference: ~/Dropbox/bin/scripts/va/vt.shorthtranscrib.vim
-"							~/Dropbox/bin/scripts/va/vta.multilines.vim
+"                           ~/Dropbox/bin/scripts/va/vta.multilines.vim
 
 " TODO: BLANK OUT VMAPS FOR KEYBOARD(S) ALSO (!!)
 "   OR!! vunmap (!!)
 mapclear
 " Resetting / Blanking the Keyboard {{{
-	" orig. = comment away keys used in the script
+    " orig. = comment away keys used in the script
 " New   = reactivate keys needed/used in the script
 
 "------- NOPS -------- (=deadkeys)
@@ -94,11 +95,11 @@ vnoremap 9 <nop>
 " vnoremap 0 <nop>
 
 " }}}
-"			(+some settings??  (=nohlsearch etc??))
+"           (+some settings??  (=nohlsearch etc??))
 set nohlsearch
 set foldmethod=marker
-	" set textwidth =30?? (=some number good for very small viewport)
-	"					+||also set @g or the like to 'gqap' (etc)
+    " set textwidth =30?? (=some number good for very small viewport)
+    "                   +||also set @g or the like to 'gqap' (etc)
 
 "some old|new basics
 nnoremap gg g;

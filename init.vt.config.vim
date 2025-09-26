@@ -3,7 +3,7 @@
 
 " z9: vt.initboard-set.vim
 " ((or boardinit  to avoid mixing up w. 'init' (??) ))
-	" =change apps set to the initboard (=z1-10)
+    " =change apps set to the initboard (=z1-10)
 
 tabedit /storage/emulated/0/va/inits/init.vt.vim
 " use w:

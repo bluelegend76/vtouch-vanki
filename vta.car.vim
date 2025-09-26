@@ -1,4 +1,6 @@
 " /storage/emulated/0/vimanki_car.vim
+" vim:sw=2:fdm=marker:
+" ~/RiderProjects/vtouch-vanki/doc/vanki_car-ChangeUndo.png
 
 set foldmethod=marker | nnoremap <space> za
 
@@ -6,17 +8,17 @@ set foldmethod=marker | nnoremap <space> za
 "------- MAPS -------
 
 " auxilliary (=numberpad)
-	" better undo
+    " better undo
 nnoremap 1 u
-	" Back to previous a-line (=fold)
+    " Back to previous a-line (=fold)
 nnoremap 4 zmzk-ztzj2
-	" Save file (*!)
+    " Save file (*!)
 nnoremap 5 :up
-	" Delete post
+    " Delete post
 nnoremap 7 zm-2ddzj
-	" V-mark line
+    " V-mark line
 nnoremap 6 V
-	" Reset Practice-block
+    " Reset Practice-block
 "nnoremap 0 dd}-p#dd{p<<<<>>ztzj
 " Refact: 'reset vanki-block'
 nnoremap 00 {/----dd}-p{ndd{p:let @/='.*@.\=$'
@@ -28,17 +30,17 @@ nnoremap qs :setlocal hlsearch/.*@.\=$
 nnoremap 0 :setlocal nohlsearch
 
 " main (=keyspad) ------ 
-	" OPEN: show/hide post
+    " OPEN: show/hide post
 nnoremap H za
-	" TO TOP: line/post to 'again'-block (*)
+    " TO TOP: line/post to 'again'-block (*)
 nnoremap U zm-2dd?\v^\s*\zs-{4}Pzmzj2:up
-	" TO BOTT: line/post to 'later'-block (*)
-	" TODO: TESTA M. 4 C-E (EL. EV. ÄNNU MER (**!))
+    " TO BOTT: line/post to 'later'-block (*)
+    " TODO: TESTA M. 4 C-E (EL. EV. ÄNNU MER (**!))
 nnoremap K zm-2dd}Pzmzjzt5:up
-	" SHOW UP: line/post to 'later'-block (*)
-	" TODO: REVERSE BACK TO UP=C-E + DOWN=C-Y (**)
+    " SHOW UP: line/post to 'later'-block (*)
+    " TODO: REVERSE BACK TO UP=C-E + DOWN=C-Y (**)
 nnoremap R 
-	" SHOW DOWN: line/post to 'later'-block (*)
+    " SHOW DOWN: line/post to 'later'-block (*)
 nnoremap T 
 
 
