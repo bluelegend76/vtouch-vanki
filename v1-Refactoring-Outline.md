@@ -39,6 +39,7 @@ Idea: =Sketch out|List Basic Functionality for the respective Apps, Name the fun
 ## ~/repos/vtouch-vanki/vtd.tagging.vim
 - [ ] SEARCH FOR V-MARKED, + REPLACE REPLACE BLANKS IN THE MIDDLE WITH A DASH
 - [ ] G/J Activates/Reactivates Sentence-Highlight ****
+z
 - [ ] one empty unhighlighted line at top (as padding)
 ----
 - Dashify V-Marked ****
