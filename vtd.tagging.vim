@@ -245,27 +245,28 @@ nnoremap qf :tabedit /storage/emulated/0/va/rsc/bmks/
 
 " reactivate last v-mark
 nnoremap OO gv
+map OO gv
 " Back to top of paragraph
 vnoremap 1 <Esc>{<CR>ztviso
 
 " format paragr. acc. to text-width (etc)
-" nnoremap 00 /^\s-oi0gqap{dd:up
-" vnoremap OO /^\s-oi0gqap{dd:upgvzt
-" vnoremap O gqap:upgvzt
-vnoremap GG /^\s-oi0gqap{dd:up:nohlsearch<CR>gvzt
-vnoremap G gqap:upgvzt
+" nnoremap 00 /^\s<CR>-o<CR>i0gqap{dd:up<CR>
+" vnoremap OO /^\s<CR>-o<CR>i0gqap{dd:up<CR>gvzt
+" vnoremap O gqap:up<CR>gvzt
+vnoremap GG <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>:nohlsearch<CR>gvzt
+vnoremap G <Esc>gqap:up<CR>gvzt
 " format source-code
 nnoremap O =iB
 " remove blank bef. next paragr.
-" vnoremap 6 }ddgqap:upgviszt
-vnoremap 6 }dd``visoztgq:upgv
+" vnoremap 6 <Esc>}ddgqap:up<CR>gviszt
+vnoremap 6 <Esc>}dd``visoztgq:up<CR>gv
 vnoremap A o<Esc>o<Esc>gvo
 
 " Default-tag v-Marked(!!)
-vnoremap N iN@:upgv
+vnoremap N <Esc>iN@<Esc>:up<CR>gv
 
-vnoremap Q iQ@:upgv
-vnoremap T iT@:upgv
+vnoremap Q <Esc>iQ@<Esc>:up<CR>gv
+vnoremap T <Esc>iT@<Esc>:up<CR>gv
 
 vnoremap D o<Esc>f x:up<CR>gvo
 " vnoremap C d:up<CR>gv
