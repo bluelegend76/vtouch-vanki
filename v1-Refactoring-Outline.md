@@ -1,3 +1,32 @@
+
+## vanki Multilines
+
+## vanki Review
+- Restart + Set good basic working structure (1.0)
+
+## vanki Car
+
+## ~/repos/vtouch-vanki/vtd.tagging.vim
+- [ ] SEARCH FOR V-MARKED, + REPLACE REPLACE BLANKS IN THE MIDDLE WITH A DASH
+- [ ] G/J Activates/Reactivates Sentence-Highlight ****
+- [ ] one empty unhighlighted line at top (as padding)
+----
+- Dashify V-Marked ****
+- add comma after v-marked,
+
+Quick-flip for 'do not break words at screen-edge'-mode
+--"-- for increasing/decreasing splitsize
+- [ ] Custom omaps (to target different vanki-blocks)
+
+## vanki Reftxt 2 VankiNotes
+
+### svsyndb-tag
+
+## vtd Dualist
+
+
+# General TODO-List
+
     https://vimdoc.sourceforge.net/htmldoc/usr_41.html#41.9
     https://vim-jp.org/vimdoc-en/eval.html#exception-handling
 
@@ -7,6 +36,8 @@
 - [ ] CHANGE TO BUFFERS (INSTEAD OF TABS)
 - Add 'normal!'-Mode
 
+- Add support using termux-open
+  - Maybe using/remapping 'gx'
 Add support for opening images/soundfiles (etc) with cursor
   on text/path [****]
 
@@ -30,26 +61,3 @@ Idea: =Sketch out|List Basic Functionality for the respective Apps, Name the fun
 
 ----
 
-## vanki Multilines
-
-## vanki Review
-
-## vanki Car
-
-## ~/repos/vtouch-vanki/vtd.tagging.vim
-- [ ] SEARCH FOR V-MARKED, + REPLACE REPLACE BLANKS IN THE MIDDLE WITH A DASH
-- [ ] G/J Activates/Reactivates Sentence-Highlight ****
-- [ ] one empty unhighlighted line at top (as padding)
-----
-- Dashify V-Marked ****
-- add comma after v-marked,
- 
-Quick-flip for 'do not break words at screen-edge'-mode
---"-- for increasing/decreasing splitsize
-- [ ] Custom omaps (to target different vanki-blocks)
-
-## vanki Reftxt 2 VankiNotes
-
-### svsyndb-tag
-
-## vtd Dualist
