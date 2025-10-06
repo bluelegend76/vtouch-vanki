@@ -1,20 +1,25 @@
+~/repos/vtouch-vanki/doc/vimtouch-scrsh_vimankidraft.png
+~/repos/vtouch-vanki/doc/rsc/keyboard-termux.jpg
+TODO Move to rsc:
+  ~/repos/vtouch-vanki/doc/VT_VANKI-DOC.MASTER.xcf
+
 jumplist|navigation:
-    z1  __z1
-	 === vta.multilines.vim ===
-    z2  __z2
-	 === vta.review.vim ===
-    z3  __z3
-	 === vta.car.vim ===
-    z4  __z4
-	 === vtd.reftxt2vankinotes.vim ===
-    z5  __z5
-	 === vt.shorthtranscrib.vim ===
-    z6  __z6
-	 === vtd.tagging.vim ===
-    z7  __z7
-	 === vtd.svsyndb-tag.vim ===
-    z8  __z8
-	 === vtd.dualist.vim ===
+    === vta.multilines.vim ===
+     z1  __z1
+    === vta.review.vim ===
+     z2  __z2
+    === vta.car.vim ===
+     z3  __z3
+    === vtd.reftxt2vankinotes.vim ===
+     z4  __z4
+    === vt.shorthtranscrib.vim ===
+     z5  __z5
+    === vtd.tagging.vim ===
+     z6  __z6
+    === vtd.svsyndb-tag.vim ===
+     z7  __z7
+    === vtd.dualist.vim ===
+     z8  __z8
 
 New VTA-script Ideas[!!]:
  - Indent Checklists
@@ -37,248 +42,261 @@ Newer Idiom: Clear Whole Rev-Maps %
  =multilines, review, car %
 
     z1  __z1
+~/repos/vtouch-vanki/doc/vanki_Multiline-BetterUndo--AddFuncts.png
     ## aux 'n' + 'zt - 1'
-	=== vta.multilines.vim ===
-	# =basic shuffle-review(**)
-save				3|4
-del. post			6|7
- vmark line			vv
-reset pract.block	00
-ripple-reset block	09
+    === vta.multilines.vim ===
+    # =basic shuffle-review(**)
+save                3|4
+del. post           6|7
+ vmark line         vv
+reset pract.block   00
+ripple-reset block  09
     # =reset + go to next
 --
-show | hide q.		TYU.GHJ
-q. up | down		WE.SD | OP.LÖ
-text up | down		ZXC | BNM
+show | hide q.      TYU.GHJ
+q. up | down        WE.SD | OP.LÖ
+text up | down      ZXC | BNM
     #(!!: Factor Out(!))
 --
- tag '@'			  q1
- tag '@@'			  q2
- tag '@@(@)'		  q3
-highl. @-tagged		 qs *
-reset hl.			 0
+ tag '@'              q1
+ tag '@@'             q2
+ tag '@@(@)'          q3
+highl. @-tagged      qs *
+reset hl.            0
 
     z2  __z2
-	=== vta.review.vim ===
-save				3
+~/repos/vtouch-vanki/doc/vanki_review-QReview.png
+    === vta.review.vim ===
+save                3
  up one q.           4
-reset pract.block	00
-ripple-reset block	 09
+reset pract.block   00
+ripple-reset block   09
 ----
-show | hide q.		ERT.DFG
- speedreview(*)		 QW.AS
-next post + c-e		YUI.HJK
- text up | down		 ZXC | BNM
+show | hide q.      ERT.DFG
+ speedreview(*)      QW.AS
+next post + c-e     YUI.HJK
+ text up | down      ZXC | BNM
 flip ltr/rtl (!)     OP.LÖ
 --
- tag '(@)'			  QA
- tag '@'			  QQ
- tag '@(@)'			  Q1
- tag '@@'			  Q2
- tag '@@(@)'		  Q3
- tag '@@ @'		      Q4
-highl. @-tagged		 qs *
-reset hl.			 0
+ tag '(@)'            QA
+ tag '@'              QQ
+ tag '@(@)'           Q1
+ tag '@@'             Q2
+ tag '@@(@)'          Q3
+ tag '@@ @'           Q4
+highl. @-tagged      qs *
+reset hl.            0
 
     z3  __z3
-	=== vta.car.vim ===
-save				5 @
- to prev. q. *(!)	 4 @@(@)
-del. q+a			7
- reset pract.block	 00
- ripple-reset block	 09
-vmark line			6
+~/repos/vtouch-vanki/doc/vanki_car-ChangeUndo.png
+    === vta.car.vim ===
+save                5 @
+ to prev. q. *(!)    4 @@(@)
+del. q+a            7
+ reset pract.block   00
+ ripple-reset block  09
+vmark line          6
 ----
-show | hide q.		H
-q. up | down		U | K
- undo				 C
+show | hide q.      H
+q. up | down        U | K
+ undo                C
 --
- tag '@'			  OO
- tag '@@'			  O8
- tag '@@(@)'		  OP
-highl. @-tagged		 qs *
+ tag '@'              OO
+ tag '@@'             O8
+ tag '@@(@)'          OP
+highl. @-tagged      qs *
     # (=Set to Other(????))
-reset hl.			 0
+reset hl.            0
 
-	   (=== vta.review-car.vim (???? (=new(!!))) )
+       (=== vta.review-car.vim (???? (=new(!!))) )
 
 
     z4  __z4
-	=== vtd.reftxt2vankinotes.vim ===# add 'Zz' = Esc
+~/repos/vtouch-vanki/doc/Reftxt2Vankinotes.xcf
+~/repos/vtouch-vanki/doc/Reftxt2Vankinotes.png
+    === vtd.reftxt2vankinotes.vim ===# add 'Zz' = Esc
 # Refact|Del(??): ZX (=next paragr.(??))  %
 # TODO REFACT: Binary Modes Switch
 ## TextMode | LonglinesMode !!(**)##
-	## nohlsearch, foldmethod=marker
-	# base editing(!!): space(=mark), (ED),  QA, T(**),  E = aux Esc
-save				3
-split l. | join **	5 | 55
-vmark line			vv
+    ## nohlsearch, foldmethod=marker
+    # base editing(!!): space(=mark), (ED),  QA, T(**),  E = aux Esc
+save                3
+split l. | join **  5 | 55
+vmark line          vv
     # (v + v_V)
- '/' next a@-tag **	 q5  [!!!!]
-open DECK.MASTER *	qed
- find extdok-string (eg. fr. pdf|web) in txt ref-file	 qs
+ '/' next a@-tag **  q5  [!!!!]
+open DECK.MASTER *  qed
+ find extdok-string (eg. fr. pdf|web) in txt ref-file    qs
     # searches '+'-string in txt-ref
  --
-format paragr.(!)	O   # n|v-mode
-'remove stairstep'	OO  ## * n|v-mode
+format paragr.(!)   O   # n|v-mode
+'remove stairstep'  OO  ## * n|v-mode
 (v)del. next blank
-  line + gq **		6
+  line + gq **      6
 ----
-vmarked to cloze *	qw
+vmarked to cloze *  qw
 --  z4[=Core Funct.]
   flip tab (+save |
         | cut(v))   QA
-  open next f.		 U
-  close f. + Ent	 VB
-new VankiFold *		7  (%)
+  open next f.       U
+  close f. + Ent     VB
+new VankiFold *     7  (%)
   \(cursor on q-line w. num(!))
     #Refac(??|!): add zm first[!!]
-new VankiBlock *	8
+new VankiBlock *    8
     #=delimit + new block
-bump refdok pgnr	qd
-vmark megablocks	mm(line 1) + vmark bot. + 1
- (v)Ent					T
+bump refdok pgnr    qd
+vmark megablocks    mm(line 1) + vmark bot. + 1
+ (v)Ent                 T
     #(=reset|Refact(!!))
-vmark n.|prev. sent.	W | S *****
+vmark n.|prev. sent.    W | S *****
     #+zt
- paste l.s + indent		G
+ paste l.s + indent     G
     #=Refac(!! =dont have to 'GYI'++++ for blocks(!!))
- > / < line ***		   II | YY
+ > / < line ***        II | YY
  > last pasted l.s *   YI
  --
 fr. open a-fold  =star prev. q-line: (**(*))
-	@			q1
-	@@			q2
-	@@(@)		q3
+    @           q1
+    @@          q2
+    @@(@)       q3
 star-tag lines: *
-	*			å0
-	**			åå
-	**(*)		å9
-	(??)		å8
-	(!)			å6
-	(!!)		å7
+    *           å0
+    **          åå
+    **(*)       å9
+    (??)        å8
+    (!)         å6
+    (!!)        å7
  --
-## consist. format for inner a-block(!!)		  qf
+## consist. format for inner a-block(!!)          qf
     #[=MAY BE REDONE W. ADVANC. REFACT. 2021+(!!)]
 ----
-insert ' 'blank l.		ZZ
-ins. pure(!) blank l.	zz
+insert ' 'blank l.      ZZ
+ins. pure(!) blank l.   zz
     #=New(!! =Refactor)
-vmark 'back'	B (**)
-down | up		J | K
- undo			M
-del. line		DD
+vmark 'back'    B (**)
+down | up       J | K
+ undo           M
+del. line       DD
 [del. | edit vmarked   X | C]
- aux. 'n'		ÅÄ
+ aux. 'n'       ÅÄ
 
     z5  __z5
-	=== vt.shorthtranscrib.vim ===
+~/repos/vtouch-vanki/doc/vanki_shorthtranscrib_ADD-ÄX.png
+    === vt.shorthtranscrib.vim ===
 # ic, hlsearch, incsearch
-to top ref 1|2		1, 2
+to top ref 1|2      1, 2
 --
-save				4
-:nohlsearch			0
-Vmark Next W.		space
+save                4
+:nohlsearch         0
+Vmark Next W.       space
 ----
-yiw + search k.		 W
-(v)search k.		V	#+=fragm.(!)
-(v)exact search k.	X **
-yank curs. k-line	Y (!)
-/: find k-string	K *
- [word-end mark		 M ]
- [w-end key-box		 A ]   # '[]'
- [w.e. custom key	 Ä ]   # '[[]]'
-jump back			O
- [(v) pull k-string (=directly)	 D ]
+yiw + search k.      W
+(v)search k.        V   #+=fragm.(!)
+(v)exact search k.  X **
+yank curs. k-line   Y (!)
+/: find k-string    K *
+ [word-end mark      M ]
+ [w-end key-box      A ]   # '[]'
+ [w.e. custom key    Ä ]   # '[[]]'
+jump back           O
+ [(v) pull k-string (=directly)  D ]
 --
-Load refblock		R
+Load refblock       R
     # /storage/emulated/0/Download/refsteno-
 
     z6  __z6
-	=== vtd.tagging.vim ===
-save				1
-vesc(+'l')			3
- (n)gv				 00
+~/repos/vtouch-vanki/doc/Tagging.xcf
+~/repos/vtouch-vanki/doc/Tagging.png
+    === vtd.tagging.vim ===
+save                1
+v-esc(+'l')         3
+ (n)gv               OO
+ O = gv
+ ## OO = gx/termux-open
+ ## OR USE 'termux-open image.png'
+ ## (I.E. 'EXPLICIT LINES')
+ (n)nohl             0
  --
-(v)format paragr.	O	  # +:up
-(v)'no stairsteps'	OO **  # +:up
- (v)del. next blank line(!)	  6
-gt			        8
+(v)format paragr.   G     # +:up
+(v)'no stairsteps'  GG **  # +:up
+ (v)del. next blank line(!)   6
+gt                  8
 (yank vmarked to '+'   9 )
 ----
-vmark sent. *		      5|6
-    (v)vm to prev. sent.	 5
-(v) next sent.(!)	YUI.HJK
- (v)Tag=N		   N
- (v)Tag=T		   T
- (v)Tag=Q *		   Q ; C
-Undo | Redo (!)	    Ä | Å
+vmark sent. *             5|6
+    (v)vm to prev. sent.     5
+(v) next sent.(!)   YUI.HJK
+ (v)Tag=N          N
+ (v)Tag=T          T
+ (v)Tag=Q *        Q ; C
+Undo | Redo (!)     Ä | Å               ____
     #'äh!/åter'
 --
-vesc(+'l')		  WER.SDF ; PÖ
+vesc(+'l')        WER.SDF ; PÖ
     # prep. for nmode tagging
- vmark w. | next w. (!)		space
-(n)to prev|next tagged *	q1 | q2
+ vmark w. | next w. (!)     space
+(n)to prev|next tagged *    q1 | q2
 [basic n-tags
-	N, T, U, P,  Q, A,
+    N, T, U, P,  Q, A,
      (=n, t, u, P,  Q, A)
-	H, M,  E=te, I=ti(p), K=tk(*), F
-ucase w.tags		C
-r last tagletter	r
-rep. w.s tag *		R
+    H, M,  E=te, I=ti(p), K=tk(*), F
+ucase w.tags        C
+r last tagletter    r
+rep. w.s tag *      R
 --
- (n)to next|prev. paragr.	cv | qq
+ (n)to next|prev. paragr.   cv | qq
     #+zt
-(n)list bmk-rsc-files	   qf
+(n)list bmk-rsc-files      qf
 
     z7  __z7
-	=== vtd.svsyndb-tag.vim ===
-save				3|4
-split long line		6|7  # next ' ' = '@@\n@@'
- vmark line			9
-(n)clear hls		0
+    === vtd.svsyndb-tag.vim ===
+save                3|4
+split long line     6|7  # next ' ' = '@@\n@@'
+ vmark line         9
+(n)clear hls        0
 ----
-ent + scroll 1 l.	space
-vmark next w. (**)	QW.AS
-tag Fun			F
-tag Usef		U
-tag New			N
+ent + scroll 1 l.   space
+vmark next w. (**)  QW.AS
+tag Fun         F
+tag Usef        U
+tag New         N
     # (=learning)
 tag Etym|Expln. E
-tag Hm			H
+tag Hm          H
     # (=includ. 'Mistake')
-tag Post		P
+tag Post        P
     # (=whole post|concept (eg. 'absolut'))
-	.
-	.
+    .
+    .
 -------------------------------------
 Ny Temp(**(!!)): mute-reftagging(=2021++)
-	(=tag txt mutereflist w. simple _1, _2 etc-tags (=for simple break apart-filtering 2021 ++(!!)))
+    (=tag txt mutereflist w. simple _1, _2 etc-tags (=for simple break apart-filtering 2021 ++(!!)))
 -------------------------------------
 
 
     z8  __z8
-	=== vtd.dualist.vim ===
-	# nohlsearch, foldmethod=marker
+    === vtd.dualist.vim ===
+    # nohlsearch, foldmethod=marker
 # New!  transpose word(!!)   #=for rearr.ing '_tag'-order  (=for searching multitags)
 --
-save				   3
- top of paragr. + zt	1
-to prev.|next list	  5 | 6
-item(s) to prev.||next list	 55 | 66
+save                   3
+ top of paragr. + zt    1
+to prev.|next list    5 | 6
+item(s) to prev.||next list  55 | 66
   .
-  #[!!] N | n		   7|8
+  #[!!] N | n          7|8
 ----
-V | Vesc **	        space
+V | Vesc **         space
 --
-curs.line up | dn.	QA  |  UJ
-vl.mark up | dn.	 ED | TG
- vmode o			 0
-view up | down		ZX | VB
+curs.line up | dn.  QA  |  UJ
+vl.mark up | dn.     ED | TG
+ vmode o             0
+view up | down      ZX | VB
  .
    .
  #[!!] vmarked up|dn.  OL | ÅÄ
    .
-(!!) line-hlsearch _tagged ((****))	 qq|q1 (?????(!!!!!))
+(!!) line-hlsearch _tagged ((****))  qq|q1 (?????(!!!!!))
 
 
