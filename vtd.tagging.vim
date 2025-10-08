@@ -1,5 +1,7 @@
 " ~/Dropbox/bin/scripts/va/vtd.tagging.vim
 " vim:sw=2:fdm=marker:
+
+" __
 " ~/RiderProjects/vtouch-vanki/doc/Tagging.xcf
 " ~/RiderProjects/vtouch-vanki/doc/Tagging.png
 " TODO
@@ -112,9 +114,12 @@ vnoremap 9 <nop>
 " Folding-commands on non-folded line:
 "   = Go to next fold (instead of just showing error-message)
 
+let @c='viw"aywviw"ay'
+let @e='ma:.,$s/\vasb/-/g`a'
 let @s='\zs( |\n\s*)\ze'
+let @r='@c@e'
 
-nnoremap 7 :colors <c-d>
+" nnoremap 7 :colors <c-d>
 
 set hlsearch
 " ------- aux (=numpad) -------
@@ -124,6 +129,7 @@ nnoremap 1 :up
 
 " aux Esc
 vnoremap 3 l
+noremap B B
 " vnoremap 3 ? \\|^\zs[^ ]    W-T-F!????
  " vnoremap W l
  " vnoremap S l
@@ -132,8 +138,8 @@ vnoremap 3 l
  " vnoremap R l
  " vnoremap F l
   "--
-  vnoremap P l
-  vnoremap Ö l
+  " vnoremap P l
+  " vnoremap Ö l
 
 inoremap zz <Esc>
 inoremap Zz <Esc>
@@ -152,15 +158,15 @@ nnoremap 5 visozt
 nnoremap 6 visozt
 " v-Mark next(!) Sentence + zt
   " vnoremap G )visozt
-  vnoremap Y )visozt
-  vnoremap H )visozt
-  vnoremap U )visozt
+  " vnoremap Y )visozt
+  " vnoremap H )visozt
+  " vnoremap U )visozt
   vnoremap J )visozt
-  vnoremap I )visozt
-  vnoremap K )visozt
-  vnoremap V )visozt
-  vnoremap B )visozt
-  vnoremap M )visozt
+  " vnoremap I )visozt
+  " vnoremap K )visozt
+  " vnoremap V )visozt
+  " vnoremap B )visozt
+  " vnoremap M )visozt
 " v-mark prev.(!) sentence
 vnoremap 5 (visozt
 
@@ -182,20 +188,20 @@ nnoremap 0 :set hlsearch!<CR>
 " set default tags (**(!))
 nnoremap N bin@
 nnoremap T bit@
-nnoremap U biu@
-nnoremap P biP@
+" nnoremap U biu@
+" nnoremap P biP@
 nnoremap Q biQ@
 nnoremap A biA@
-nnoremap H bih@
-nnoremap M bim@
+" nnoremap H bih@
+" nnoremap M bim@
 "--
-nnoremap E bite@
-nnoremap I biti@
-nnoremap K bitk@
-nnoremap F bif@
+" nnoremap E bite@
+" nnoremap I biti@
+" nnoremap K bitk@
+" nnoremap F bif@
 
-" Capitalize word's tags(!!)
-nnoremap C ma/[^ ]\ze \\|$F@mtviW`tU`a:nohlsearch:up
+"" " Capitalize word's tags(!!)
+"" nnoremap C ma/[^ ]\ze \\|$F@mtviW`tU`a:nohlsearch:up
 
 " aux Redo|Undo
 nnoremap Å 
@@ -204,6 +210,7 @@ nnoremap Ä u
 vnoremap Ä ugv
 nnoremap OO gv
 
+" __
 " change letter of last added tag
 nnoremap r hr
 
@@ -245,7 +252,7 @@ nnoremap qf :tabedit /storage/emulated/0/va/rsc/bmks/
 
 " reactivate last v-mark
 nnoremap OO gv
-map OO gv
+"" map OO gv
 " Back to top of paragraph
 vnoremap 1 <Esc>{<CR>ztviso
 
@@ -253,8 +260,9 @@ vnoremap 1 <Esc>{<CR>ztviso
 " nnoremap 00 /^\s<CR>-o<CR>i0gqap{dd:up<CR>
 " vnoremap OO /^\s<CR>-o<CR>i0gqap{dd:up<CR>gvzt
 " vnoremap O gqap:up<CR>gvzt
-vnoremap GG <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>:nohlsearch<CR>gvzt
+nnoremap G gqap<CR>:up<CR>
 vnoremap G <Esc>gqap:up<CR>gvzt
+vnoremap GG <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>:nohlsearch<CR>gvzt
 " format source-code
 nnoremap O =iB
 " remove blank bef. next paragr.
@@ -264,7 +272,6 @@ vnoremap A o<Esc>o<Esc>gvo
 
 " Default-tag v-Marked(!!)
 vnoremap N <Esc>iN@<Esc>:up<CR>gv
-
 vnoremap Q <Esc>iQ@<Esc>:up<CR>gv
 vnoremap T <Esc>iT@<Esc>:up<CR>gv
 
