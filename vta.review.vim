@@ -1,7 +1,8 @@
 " /storage/emulated/0/vimanki_multilines.vim
 " vim:sw=2:fdm=marker:
-" ~/RiderProjects/vtouch-vanki/doc/vanki_review-QReview2.png
-"   ~/RiderProjects/vtouch-vanki/doc/vanki_review-QReview.png
+
+" termux-open ~/repos/vtouch-vanki/doc/vanki_review-QReview2.png
+"   ~/repos/vtouch-vanki/doc/vanki_review-QReview.png
 
 set foldmethod=marker | nnoremap <space> zt
 

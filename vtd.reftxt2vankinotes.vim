@@ -1,6 +1,7 @@
 " vim:sw=2:fdm=marker:
-" ~/RiderProjects/vtouch-vanki/doc/Reftxt2Vankinotes.xcf
-" ~/RiderProjects/vtouch-vanki/doc/Reftxt2Vankinotes.png
+
+" ~/repos/vtouch-vanki/doc/Reftxt2Vankinotes.xcf
+" ~/repos/vtouch-vanki/doc/Reftxt2Vankinotes.png
 
 " TESTING (!!!!/****)
 " prev.script as Reference: ~/Dropbox/bin/scripts/va/vt.shorthtranscrib.vim
