@@ -261,7 +261,7 @@ vnoremap 1 <Esc>{<CR>ztviso
 " nnoremap 00 /^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>
 " vnoremap OO <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>gvzt
 " vnoremap O <Esc>gqap:up<CR>gvzt
-nnoremap G gqap<CR>:up<CR>
+nnoremap G gqap<CR>zz:up<CR>
 vnoremap G <Esc>gqap:up<CR>gvzt
 vnoremap GG <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>:nohlsearch<CR>gvzt
 " format source-code
