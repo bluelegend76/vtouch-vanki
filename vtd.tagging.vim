@@ -5,6 +5,8 @@
 " ~/repos/vtouch-vanki/doc/Tagging.xcf
 " ~/repos/vtouch-vanki/doc/Tagging.png
 " TODO
+" - ',' at `>
+" - norm!-läge  ×÷■¤
 
 "   ~/Dropbox/bin/scripts/va/tmp/vtd.tagging.orig.vim
 " /storage/emulated/0/va/inits/vtd.tagging.vim
@@ -122,6 +124,7 @@ let @r='@c@e'
 " nnoremap 7 :colors <c-d>
 
 set hlsearch
+set textwidth=35
 " ------- aux (=numpad) -------
 
 " save  (=1(!!))
