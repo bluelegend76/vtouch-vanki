@@ -1,6 +1,7 @@
 " /storage/emulated/0/vimanki_multilines.vim
 " vim:sw=2:fdm=marker:
-" ~/RiderProjects/vtouch-vanki/doc/vanki_Multiline-BetterUndo--AddFuncts.png
+
+" ~/repos/vtouch-vanki/doc/vanki_Multiline-BetterUndo--AddFuncts.png
 
 set foldmethod=marker | nnoremap <space> za
 

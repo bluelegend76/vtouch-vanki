@@ -1,6 +1,7 @@
 " /storage/emulated/0/vimanki_car.vim
 " vim:sw=2:fdm=marker:
-" ~/RiderProjects/vtouch-vanki/doc/vanki_car-ChangeUndo.png
+
+" ~/repos/vtouch-vanki/doc/vanki_car-ChangeUndo.png
 
 set foldmethod=marker | nnoremap <space> za
 

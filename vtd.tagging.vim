@@ -2,8 +2,8 @@
 " vim:sw=2:fdm=marker:
 
 " __
-" ~/RiderProjects/vtouch-vanki/doc/Tagging.xcf
-" ~/RiderProjects/vtouch-vanki/doc/Tagging.png
+" ~/repos/vtouch-vanki/doc/Tagging.xcf
+" ~/repos/vtouch-vanki/doc/Tagging.png
 " TODO
 
 "   ~/Dropbox/bin/scripts/va/tmp/vtd.tagging.orig.vim
@@ -114,7 +114,7 @@ vnoremap 9 <nop>
 " Folding-commands on non-folded line:
 "   = Go to next fold (instead of just showing error-message)
 
-let @c='viw"aywviw"ay'
+let @c='viw"aywviw"by'
 let @e='ma:.,$s/\vasb/-/g`a'
 let @s='\zs( |\n\s*)\ze'
 let @r='@c@e'
@@ -125,21 +125,21 @@ set hlsearch
 " ------- aux (=numpad) -------
 
 " save  (=1(!!))
-nnoremap 1 :up
+nnoremap 1 :up<CR>
 
 " aux Esc
-vnoremap 3 l
-noremap B B
-" vnoremap 3 ? \\|^\zs[^ ]    W-T-F!????
- " vnoremap W l
- " vnoremap S l
- " vnoremap E l
- " vnoremap D l
- " vnoremap R l
- " vnoremap F l
+vnoremap 3 <Esc>l
+noremap B <Esc>B
+" vnoremap 3 <Esc>? \\|^\zs[^ ]<CR>    W-T-F!????
+ " vnoremap W <Esc>l
+ " vnoremap S <Esc>l
+ " vnoremap E <Esc>l
+ " vnoremap D <Esc>l
+ " vnoremap R <Esc>l
+ " vnoremap F <Esc>l
   "--
-  " vnoremap P l
-  " vnoremap Ö l
+  " vnoremap P <Esc>l
+  " vnoremap Ö <Esc>l
 
 inoremap zz <Esc>
 inoremap Zz <Esc>
@@ -148,30 +148,31 @@ inoremap zx <Esc>
 inoremap Zx <Esc>
 inoremap ZX <Esc>
 
-noremap tt zt
+vnoremap ZZ zt
 
 " join line w. next (!!)
-" nnoremap 4 :join
+" nnoremap 4 :join<CR>
 
 " v-Mark curr. Sentence + zt
-nnoremap 5 visozt
-nnoremap 6 visozt
+nnoremap 5 visozt<C-Y>
+nnoremap 6 visozt<C-Y>
+nnoremap J visozt<C-Y>
 " v-Mark next(!) Sentence + zt
-  " vnoremap G )visozt
-  " vnoremap Y )visozt
-  " vnoremap H )visozt
-  " vnoremap U )visozt
-  vnoremap J )visozt
-  " vnoremap I )visozt
-  " vnoremap K )visozt
-  " vnoremap V )visozt
-  " vnoremap B )visozt
-  " vnoremap M )visozt
+  " vnoremap G <Esc>)visozt
+  " vnoremap Y <Esc>)visozt
+  " vnoremap H <Esc>)visozt
+  " vnoremap U <Esc>)visozt
+  vnoremap J <Esc>)visozt
+  " vnoremap I <Esc>)visozt
+  " vnoremap K <Esc>)visozt
+  " vnoremap V <Esc>)visozt
+  " vnoremap B <Esc>)visozt
+  " vnoremap M <Esc>)visozt
 " v-mark prev.(!) sentence
-vnoremap 5 (visozt
+vnoremap 5 <Esc>(visozt
 
-" New Vankifold   orig: nnoremap xx 3yyp}dd3-zo
-" nnoremap 7 3yyp}dd--zm
+" New Vankifold   orig: nnoremap xx 3yy<CR>p}dd<CR>3-zo<CR>
+" nnoremap 7 3yy<CR>p}dd--zm
 
 " aux gt
 nnoremap 8 gt
@@ -186,28 +187,28 @@ nnoremap 0 :set hlsearch!<CR>
 
 " ------- Main (=Keys) -------
 " set default tags (**(!))
-nnoremap N bin@
-nnoremap T bit@
-" nnoremap U biu@
-" nnoremap P biP@
-nnoremap Q biQ@
-nnoremap A biA@
-" nnoremap H bih@
-" nnoremap M bim@
+nnoremap N bin@<Esc>
+nnoremap T bit@<Esc>
+" nnoremap U biu@<Esc>
+" nnoremap P biP@<Esc>
+nnoremap Q biQ@<Esc>
+nnoremap A biA@<Esc>
+" nnoremap H bih@<Esc>
+" nnoremap M bim@<Esc>
 "--
-" nnoremap E bite@
-" nnoremap I biti@
-" nnoremap K bitk@
-" nnoremap F bif@
+" nnoremap E bite@<Esc>
+" nnoremap I biti@<Esc>
+" nnoremap K bitk@<Esc>
+" nnoremap F bif@<Esc>
 
 "" " Capitalize word's tags(!!)
-"" nnoremap C ma/[^ ]\ze \\|$F@mtviW`tU`a:nohlsearch:up
+"" nnoremap C ma/[^ ]\ze \\|$<CR>F@mtviW`tU`a:nohlsearch<CR>:up<CR>
 
 " aux Redo|Undo
 nnoremap Å 
-vnoremap Å gv
+vnoremap Å <Esc>gv
 nnoremap Ä u
-vnoremap Ä ugv
+vnoremap Ä <Esc>ugv
 nnoremap OO gv
 
 " __
@@ -215,7 +216,7 @@ nnoremap OO gv
 nnoremap r hr
 
 " Repeat word's Tag
-nnoremap R /[^ ]\ze \\|$F@vbyP
+nnoremap R /[^ ]\ze \\|$<CR>F@vbyP
 
   " start/activate v-mark (viw)
   nnoremap <Space> viw
@@ -231,20 +232,20 @@ nnoremap R /[^ ]\ze \\|$F@vbyP
   " nnoremap qr {+READ IN ' '-SEPARATED TAG-KEY}
 
 " search next tagged
-nnoremap q2 /\a\+@
+nnoremap q2 /\a\+@<CR>
 
 " search prev. tagged
-nnoremap q1 ?\a\+@
+nnoremap q1 ?\a\+@<CR>
 
   " To next paragr. + to top
-  nnoremap cv }ztl
+  nnoremap cv }zt<CR>l
 
   " To prev. paragr. + to top
-  nnoremap qq {{ztl
+  nnoremap qq {{zt<CR>l
 
 " Search '+'-string, eg. fr. refdok (pdf, web, etc)
-nnoremap qs "+pu/+<BS>
-" orig:  nnoremap qs /+
+nnoremap qs "+pu/+<BS><CR>
+" orig:  nnoremap qs /+<CR>
 
 " read + list bmk resource-files
 nnoremap qf :tabedit /storage/emulated/0/va/rsc/bmks/
@@ -257,10 +258,10 @@ nnoremap OO gv
 vnoremap 1 <Esc>{<CR>ztviso
 
 " format paragr. acc. to text-width (etc)
-" nnoremap 00 /^\s<CR>-o<CR>i0gqap{dd:up<CR>
-" vnoremap OO /^\s<CR>-o<CR>i0gqap{dd:up<CR>gvzt
-" vnoremap O gqap:up<CR>gvzt
-nnoremap G gqap<CR>:up<CR>
+" nnoremap 00 /^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>
+" vnoremap OO <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>gvzt
+" vnoremap O <Esc>gqap:up<CR>gvzt
+nnoremap G gqap<CR>zz:up<CR>
 vnoremap G <Esc>gqap:up<CR>gvzt
 vnoremap GG <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>:nohlsearch<CR>gvzt
 " format source-code

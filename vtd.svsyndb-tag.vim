@@ -1,5 +1,6 @@
 " /storage/emulated/0/vimanki_svsyndbtag.vim
 " vim:sw=2:fdm=marker:
+
 "   Tag SvsynDb-words
 
 " TODO TODO !!!!!!!!!!!!!!! :  Finish + Start to Test vimanki_shorthtranscrib.vim (!!!!! (*******) )  *****
