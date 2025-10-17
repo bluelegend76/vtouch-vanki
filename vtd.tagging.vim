@@ -2,11 +2,15 @@
 " vim:sw=2:fdm=marker:
 
 " __
+" ~/repos/vtouch-vanki/doc/vimtouch-scrsh_vimankidraft.png
+"
 " ~/repos/vtouch-vanki/doc/Tagging.xcf
 " ~/repos/vtouch-vanki/doc/Tagging.png
 " TODO
 " - ',' at `>
 " - norm!-läge  ×÷■¤
+" - (peek) MOVE BETW. TWO SENTENCE-PARTS (DISMEMBERS)
+"   = Promote/Demote (push/fetch)
 
 "   ~/Dropbox/bin/scripts/va/tmp/vtd.tagging.orig.vim
 " /storage/emulated/0/va/inits/vtd.tagging.vim

@@ -1,6 +1,8 @@
 " /storage/emulated/0/vimanki_multilines.vim
 " vim:sw=2:fdm=marker:
 
+" ~/repos/vtouch-vanki/doc/vimtouch-scrsh_vimankidraft.png
+"
 " termux-open ~/repos/vtouch-vanki/doc/vanki_review-QReview2.png
 "   ~/repos/vtouch-vanki/doc/vanki_review-QReview.png
 
@@ -112,7 +114,7 @@ nnoremap 3 :up
     "
 " Refact: 'reset vanki-block'
 nnoremap 00 {/----dd}-p{ndd{p:let @/='.*@.\=$'
-" "Ripple reset vanki-blocks"
+" "Ripple-reset vanki-blocks"
 nnoremap 09 {/----dd}-p{ndd{p}zt:let @/='.*@.\=$'
 " query tags(**)  =  '/' + highl. l. =next @-tagged(****)
 nnoremap qs :setlocal hlsearch/.*@.\=$
