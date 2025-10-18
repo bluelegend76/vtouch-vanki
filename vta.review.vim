@@ -6,6 +6,16 @@
 " termux-open ~/repos/vtouch-vanki/doc/vanki_review-QReview2.png
 "   ~/repos/vtouch-vanki/doc/vanki_review-QReview.png
 
+" TODO
+" ToggleFold:(=fold)
+" ToNextFold:
+" TonextfoldPlusOpenIt: ='Quick-Review'
+"   ToggleRighttoleft:
+" ScrollUpdown: 
+" --
+" Highlight_STARRED : 
+" TODO 2025: IF 'E490'(No Fold under Cursor), GO TO NEXT FOLD/QUESTION
+
 set foldmethod=marker | nnoremap <space> zt
 
 " Resetting / Blanking the Keyboard {{{

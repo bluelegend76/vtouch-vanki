@@ -6,14 +6,36 @@
 "
 " ~/repos/vtouch-vanki/doc/Tagging.xcf
 " ~/repos/vtouch-vanki/doc/Tagging.png
-" TODO
-" - ',' at `>
-" - norm!-läge  ×÷■¤
-" - (peek) MOVE BETW. TWO SENTENCE-PARTS (DISMEMBERS)
-"   = Promote/Demote (push/fetch)
-
 "   ~/Dropbox/bin/scripts/va/tmp/vtd.tagging.orig.vim
 " /storage/emulated/0/va/inits/vtd.tagging.vim
+
+" FormatParagraph: G
+"   AddLineBelow: A
+"   DeleteTrailingBlank: D
+" --
+" NextSentence: J
+"  SettingTags: QA T N
+"     indentCode:  I
+"  FormatCodeBlock: O
+" TODO ======================================================
+"   JoinCurrLineWithNext: ,J
+"   GoToLastLessthan35_Space: M  # move cursor to 37 + 'F '
+" FIXME: Break Out: norm!-läge  ×÷■¤  ,Z
+" FIXME: Separate:(vmap: at end) ',' at `>  " Outpost
+" FIXME: Dasher: next / previous
+" DISMEMBERS: Flip/Jump + (från start-del: push/fetch)
+"   Dasher-FORTIFIED: SEARCH FOR V-MARKED, + REPLACE BLANKS IN THE MIDDLE WITH A DASH
+"      - report number of replacements
+" VisualLine: vnoremap V
+" FIXME: LineBreaker:(on/off) Quick-flip for 'do not break words at screen-edge'-mode
+" --
+" # [ ] vhighlight: empty unhighlighted line at top (as padding)
+"
+"  ## c-w w + maximize splitsize  = GLOBAL VIMRC-MAPPINGS
+"  ## increase (/decrease splitsize)
+"  ## equalize splitsize
+"  ## INCREASE/DECREASE FOLDLEVEL (unfold/fold)
+"  ## @@@ Move Forw/Back in Changes/Marks//JUMP-LIST, Undo-tree
 
 " Resetting / Blanking the Keyboard {{{
     " orig. = comment away keys used in the script
@@ -104,22 +126,6 @@ vnoremap 9 <nop>
 
 " }}}
 
-" TODO:
-" SPARSE OUT KEYMAPS
-" ADD 'nnoremap G (and J)' TO ACTIVATE VMARK VIA 'vis'
-" Add 'normal!'-Mode Override
-" - [ ] SEARCH FOR V-MARKED, + REPLACE REPLACE BLANKS IN THE MIDDLE WITH A DASH
-" vnoremap V
-" Two key-maps: dashify next; dashify previous
-"   = 
-" - add comma after v-marked
-" ### [ ] one empty unhighlighted line at top (as padding)
-" Quick-flip for 'do not break words at screen-edge'-mode
-" --"-- for increasing/decreasing splitsize
-" --"-- FOR INCREASING/DECREASING FOLDLEVEL
-" Folding-commands on non-folded line:
-"   = Go to next fold (instead of just showing error-message)
-
 let @c='viw"aywviw"by'
 let @e='ma:.,$s/\vasb/-/g`a'
 let @s='\zs( |\n\s*)\ze'
@@ -155,7 +161,7 @@ inoremap zx <Esc>
 inoremap Zx <Esc>
 inoremap ZX <Esc>
 
-vnoremap ZZ zt
+vnoremap ZZ zt<C-Y>
 
 " join line w. next (!!)
 " nnoremap 4 :join<CR>
@@ -169,7 +175,7 @@ nnoremap J visozt<C-Y>
   " vnoremap Y <Esc>)visozt
   " vnoremap H <Esc>)visozt
   " vnoremap U <Esc>)visozt
-  vnoremap J <Esc>)visozt
+  vnoremap J <Esc>)visozt<C-Y>
   " vnoremap I <Esc>)visozt
   " vnoremap K <Esc>)visozt
   " vnoremap V <Esc>)visozt
@@ -178,10 +184,8 @@ nnoremap J visozt<C-Y>
 " v-mark prev.(!) sentence
 vnoremap 5 <Esc>(visozt
 
-" New Vankifold   orig: nnoremap xx 3yy<CR>p}dd<CR>3-zo<CR>
-" nnoremap 7 3yy<CR>p}dd--zm
-
-" aux gt
+" aux gt / gT
+nnoremap 7 gT
 nnoremap 8 gt
 
 " yank vmarked to '+'-reg
@@ -190,6 +194,11 @@ vnoremap 9 "+y
 " aux  (=or g;)
 " nnoremap 0 
 nnoremap 0 :set hlsearch!<CR>
+
+" FIXME
+" Toggle 'Linebreak'-mode
+" nnoremap <Leader>L :set linebreak!<CR>
+nnoremap LL :set linebreak!<CR>
 
 
 " ------- Main (=Keys) -------
@@ -213,17 +222,30 @@ nnoremap A biA@<Esc>
 
 " aux Redo|Undo
 nnoremap Å 
-vnoremap Å <Esc>gv
+vnoremap Å <Esc><C-R>gv
 nnoremap Ä u
 vnoremap Ä <Esc>ugv
 nnoremap OO gv
 
+" FIXME
+" BREAK OUT of Plugin/Mapping-Mode
+nnoremap ZZ :norm! 
+
 " __
 " change letter of last added tag
-nnoremap r hr
+" nnoremap r hr
 
 " Repeat word's Tag
-nnoremap R /[^ ]\ze \\|$<CR>F@vbyP
+" nnoremap R /[^ ]\ze \\|$<CR>F@vbyP
+
+" FIXME
+" DASH_NEXT / DASH_PREV
+noremap <Leader>E <Esc>f s-<Esc>
+noremap <Leader>B <Esc>k:s/\n/-/<CR>:nohl<CR>
+
+" FIXME
+" Input, a comma at the end of vmarked text
+vnoremap a <Esc>a,<Esc>gv
 
   " start/activate v-mark (viw)
   nnoremap <Space> viw
