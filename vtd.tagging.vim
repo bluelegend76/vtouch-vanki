@@ -9,7 +9,7 @@
 "   ~/Dropbox/bin/scripts/va/tmp/vtd.tagging.orig.vim
 " /storage/emulated/0/va/inits/vtd.tagging.vim
 
-" FormatParagraph: G
+" FormatParagraph: GG
 "   AddLineBelow: A
 "   DeleteTrailingBlank: D
 " --
@@ -170,14 +170,15 @@ vnoremap ZZ zt<C-Y>
 nnoremap 5 visozt<C-Y>
 nnoremap 6 visozt<C-Y>
 nnoremap J visozt<C-Y>
+nnoremap K visozt<C-Y>
 " v-Mark next(!) Sentence + zt
   " vnoremap G <Esc>)visozt
-  " vnoremap Y <Esc>)visozt
-  " vnoremap H <Esc>)visozt
-  " vnoremap U <Esc>)visozt
+  vnoremap Y <Esc>)visozt
+  vnoremap H <Esc>)visozt
+  vnoremap U <Esc>)visozt
   vnoremap J <Esc>)visozt<C-Y>
-  " vnoremap I <Esc>)visozt
-  " vnoremap K <Esc>)visozt
+  vnoremap I <Esc>)visozt
+  vnoremap K <Esc>)visozt
   " vnoremap V <Esc>)visozt
   " vnoremap B <Esc>)visozt
   " vnoremap M <Esc>)visozt
@@ -290,7 +291,7 @@ vnoremap 1 <Esc>{<CR>ztviso
 " nnoremap 00 /^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>
 " vnoremap OO <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>gvzt
 " vnoremap O <Esc>gqap:up<CR>gvzt
-nnoremap G gqap<CR>zz:up<CR>
+nnoremap GG gqap<CR>zz:up<CR>
 vnoremap G <Esc>gqap:up<CR>gvzt
 vnoremap GG <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>:nohlsearch<CR>gvzt
 " format source-code
