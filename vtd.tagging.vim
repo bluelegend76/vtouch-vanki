@@ -20,16 +20,19 @@
 " TODO ======================================================
 "   JoinCurrLineWithNext: ,J
 "   GoToLastLessthan35_Space: M  # move cursor to 37 + 'F '
-" FIXME: Break Out: norm!-läge  ×÷■¤  ,Z
-" FIXME: Separate:(vmap: at end) ',' at `>  " Outpost
+" FIXME: Break Out: norm!-läge  ×÷■¤  ,Z                    ZZ
+" SETGLOBALMARK: M (Triggers ':norm! m')  [+ May Moot `Break Out`]
+" FIXME: Separate:(vmap: at end) ',' at `>  " Outpost       a
 " FIXME: Dasher: next / previous
+" FIXME: LineBreaker:(on/off) Quick-flip for 
+"    do not break words at screen-edge'-mode                LL
 " DISMEMBERS: Flip/Jump + (från start-del: push/fetch)
 "   Dasher-FORTIFIED: SEARCH FOR V-MARKED, + REPLACE BLANKS IN THE MIDDLE WITH A DASH
 "      - report number of replacements
 " VisualLine: vnoremap V
-" FIXME: LineBreaker:(on/off) Quick-flip for 'do not break words at screen-edge'-mode
 " --
 " # [ ] vhighlight: empty unhighlighted line at top (as padding)
+" GK / GJ  //  KK / KJ  Demote / Promote (sentence split by refpdf dok-link)
 "
 "  ## c-w w + maximize splitsize  = GLOBAL VIMRC-MAPPINGS
 "  ## increase (/decrease splitsize)
@@ -230,6 +233,7 @@ nnoremap OO gv
 
 " FIXME
 " BREAK OUT of Plugin/Mapping-Mode
+" TODO: Or remap to ,Z
 nnoremap ZZ :norm! 
 
 " __
