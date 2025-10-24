@@ -37,24 +37,34 @@ general bindings (=set in init):
 ### ~/Dropbox/bin/scripts/va/
 -------------------------
 
+
     z0
 ~/path/to/imagefile.png
+save/update           ,,
+break out (norm! )    ,Z
+Prepare setting
+  File-level mark     M
     === vta.review.vim ===
     # basic/shared convenience-mappings
-Tab Convenience:(gt/gT)
+Tab gt/gT:
   GTT / GT
 go to First Tab:
   ,1
 Re-Source Vimrc:
   ,0 /      ,1 / ,5 / ,3  = :source ~/.vimrc
-FindTriggerNextMisspell:
+Go to/Trigger Next Misspell:
   ,SS = ]szz
   ,S  = z=
 ConvenienceSETTRANSLSHELLTARGETLANG:
-  ,LA )  @@@
+  ,LA  @@@
 ConvenienceFOLDTOGGLE:(za)  ****
    X      ×÷■¤
-GotoNextPrev: O=C-O//C-I(JUMPS), Mark, FOLDLEVEL, Change, 
+Navigation 'GotoNextPrev':
+  JUMPS       up/down
+    (c-o/c-i)
+  Mark        s-up/s-down
+  FOLDLEVEL   right/left
+  Change      a-up/a-down
 ----
 GotoNextSplitPLUSMaximizeTargetSplit:
   ,WW
@@ -62,17 +72,20 @@ GotoNextSplitPLUSMaximizeTargetSplit:
 EqualizeSizeOfSplits:
   ,W
 ----
-OPENNEWTAB:(+split etc)
-  GW/GF = c-w gf  GW / GS
-SimpleVisualLineHighlighter:
-  = when visual-line mark active
-      up/down = vertical width stays the same
+OPEN NEW TAB:(+split etc)
+  c-w gf        GF
+  split         GS
+  tabedit       GE
+Simple Visual Line Highlighter:
+  (v) Up/Down
+
 
 ## text up | down    (=c-e | c-y)
     # ='reveal text down | up' // 'view down | up'
 Factor Out: gg, tt, n|v:zz|ZZ   Qq[??](= ':norm! ')
 Newer Idiom: Clear Whole Rev-Maps %
  =multilines, review, car %
+
 
     z1  __z1
 ~/repos/vtouch-vanki/doc/vanki_Multiline-BetterUndo--AddFuncts.png
@@ -97,6 +110,7 @@ text up | down      ZXC | BNM
 highl. @-tagged      qs *
 reset hl.            0
 
+
     z2  __z2
 ~/repos/vtouch-vanki/doc/vanki_review-QReview.png
     === vta.review.vim ===
@@ -119,6 +133,7 @@ flip ltr/rtl (!)     OP.LÖ
  tag '@@ @'           Q4
 highl. @-tagged      qs *
 reset hl.            0
+
 
     z3  __z3
 ~/repos/vtouch-vanki/doc/vanki_car-ChangeUndo.png
@@ -214,6 +229,7 @@ del. line       DD
 [del. | edit vmarked   X | C]
  aux. 'n'       ÅÄ
 
+
     z5  __z5
 ~/repos/vtouch-vanki/doc/vanki_shorthtranscrib_ADD-ÄX.png
     === vt.shorthtranscrib.vim ===
@@ -238,49 +254,64 @@ jump back           O
 Load refblock       R
     # /storage/emulated/0/Download/refsteno-
 
+
     z6  __z6
 ~/repos/vtouch-vanki/doc/Tagging.xcf
 ~/repos/vtouch-vanki/doc/Tagging.png
     === vtd.tagging.vim ===
 save                1
 v-esc(+'l')         3
- (n)gv               OO
- O = gv
+Undo | Redo (!)     Ä | Å
+--
+ (n)gv               OO     ¤
+ O = gv                     ¤
  ## OO = gx/termux-open
  ## OR USE 'termux-open image.png'
- ## (I.E. 'EXPLICIT LINES')
  (n)nohl             0
  --
-(v)format paragr.   G     # +:up
-(v)'no stairsteps'  GG **  # +:up
- (v)del. next blank line(!)   6
-gt                  8
-(yank vmarked to '+'   9 )
+ vmark w. | next w. (!)     space
+ esc + back (b)      B
+ (v) line to top     ZZ
+--
+Format Paragr.      GG
+  (v)'no stairsteps'  GG **  # +:up
+  (v)format paragr.   G      # +:up
+(v)del. next blank line(!)   6
+(v)add line after         A
+(v)del. space after v.    D
+Toggle Linebreak-mode     LL
+   (yank vmarked to '+'   9)
+  --
+Omni-dashify(v0.5)        @R  ******
+  dashify prev./next      ,B / ,E
+(v)commafy at end          a
+# Flipjump (+push/fetch)
+#  / 'Dismembers'
+#  / SplitFuse
+" VisualLine: vnoremap V
+" # [ ] vhighlight: empty unhighlighted line at top (as padding)
+" GK / GJ  //  KK / KJ  Demote / Promote (sentence split by refpdf dok-link)
 ----
 vmark sent. *             5|6
-    (v)vm to prev. sent.     5
-(v) next sent.(!)   YUI.HJK
+(v) next sent.(!)     YUI.HJK
+(v)vm to prev. sent.      5
  (v)Tag=N          N
  (v)Tag=T          T
- (v)Tag=Q *        Q ; C
-Undo | Redo (!)     Ä | Å               ____
-    #'äh!/åter'
+ (v)Tag=Q/A *      Q ; A
 --
-vesc(+'l')        WER.SDF ; PÖ
-    # prep. for nmode tagging
- vmark w. | next w. (!)     space
 (n)to prev|next tagged *    q1 | q2
 [basic n-tags
-    N, T, U, P,  Q, A,
-     (=n, t, u, P,  Q, A)
-    H, M,  E=te, I=ti(p), K=tk(*), F
-ucase w.tags        C
-r last tagletter    r
-rep. w.s tag *      R
+    N, T, Q, A, (n, t,)
 --
- (n)to next|prev. paragr.   cv | qq
-    #+zt
-(n)list bmk-rsc-files      qf
+ Join curr. line w. next    ,J
+ Split curr. line at
+    max-36-space            ,R
+
+----
+ (n)to next|prev. paragr.   cv | qq  ¤
+    #+zt                             ¤
+(n)list bmk-rsc-files      qf  ¤
+
 
     z7  __z7
     === vtd.svsyndb-tag.vim ===

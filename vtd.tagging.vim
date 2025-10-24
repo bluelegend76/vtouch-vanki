@@ -19,9 +19,7 @@
 "  FormatCodeBlock: O
 " TODO ======================================================
 "   JoinCurrLineWithNext: ,J
-"   GoToLastLessthan35_Space: I??  # move cursor to 37 + 'F '
-" FIXME: Break Out: norm!-läge  ×÷■¤  ,Z                    ZZ
-" SETGLOBALMARK: M (Triggers ':norm! m')  [+ May Moot `Break Out`]
+"   GoToLastLessthan35_Space: ,R  # move cursor to 37 + 'F '
 " FIXME: Separate:(vmap: at end) ',' at `>  " Outpost       a
 " FIXME: Dasher: next / previous                            ,E / ,B
 " FIXME: LineBreaker:(on/off)                               LL
@@ -33,12 +31,6 @@
 " # [ ] vhighlight: empty unhighlighted line at top (as padding)
 " GK / GJ  //  KK / KJ  Demote / Promote (sentence split by refpdf dok-link)
 "
-"  ## c-w w + maximize splitsize  = GLOBAL VIMRC-MAPPINGS
-"  ## increase (/decrease splitsize)
-"  ## equalize splitsize
-"  ## INCREASE/DECREASE FOLDLEVEL (unfold/fold)
-"  ## @@@ Move Forw/Back in Changes/Marks//JUMP-LIST, Undo-tree
-
 " Resetting / Blanking the Keyboard {{{
     " orig. = comment away keys used in the script
 " New   = reactivate keys needed/used in the script
@@ -128,12 +120,15 @@ vnoremap 9 <nop>
 
 " }}}
 
+
+" TODO TODO ========================
+" - 'STAIRSTEP-WISE' INDENT CODE-BLOCK
+" - FORMAT NEXT CODE-BLOCK
+
 let @c='viw"aywviw"by'
 let @e='ma:.,$s/\vasb/-/g`a'
 let @s='\zs( |\n\s*)\ze'
 let @r='@c@e'
-
-" nnoremap 7 :colors <c-d>
 
 set hlsearch
 set textwidth=35
@@ -145,16 +140,6 @@ nnoremap 1 :up<CR>
 " aux Esc
 vnoremap 3 <Esc>l
 noremap B <Esc>B
-" vnoremap 3 <Esc>? \\|^\zs[^ ]<CR>    W-T-F!????
- " vnoremap W <Esc>l
- " vnoremap S <Esc>l
- " vnoremap E <Esc>l
- " vnoremap D <Esc>l
- " vnoremap R <Esc>l
- " vnoremap F <Esc>l
-  "--
-  " vnoremap P <Esc>l
-  " vnoremap Ö <Esc>l
 
 inoremap zz <Esc>
 inoremap Zz <Esc>
@@ -165,40 +150,33 @@ inoremap ZX <Esc>
 
 vnoremap ZZ zt<C-Y>
 
-" join line w. next (!!)
-" nnoremap 4 :join<CR>
-
 " v-Mark curr. Sentence + zt
 nnoremap 5 visozt<C-Y>
 nnoremap 6 visozt<C-Y>
 nnoremap J visozt<C-Y>
 nnoremap K visozt<C-Y>
-" v-Mark next(!) Sentence + zt
+" Move Sentence v-mark forward
+" (to next sentence)
   " vnoremap G <Esc>)visozt
   vnoremap Y <Esc>)visozt
   vnoremap H <Esc>)visozt
   vnoremap U <Esc>)visozt
-  vnoremap J <Esc>)visozt<C-Y>
+  vnoremap J <Esc>)visozt
+  " vnoremap J <Esc>)visozt<C-Y>
   vnoremap I <Esc>)visozt
   vnoremap K <Esc>)visozt
   " vnoremap V <Esc>)visozt
   " vnoremap B <Esc>)visozt
   " vnoremap M <Esc>)visozt
+
 " v-mark prev.(!) sentence
 vnoremap 5 <Esc>(visozt
 
-" aux gt / gT
-nnoremap 7 gT
-nnoremap 8 gt
+" " yank vmarked to '+'-reg
+" vnoremap 9 "+y
 
-" yank vmarked to '+'-reg
-vnoremap 9 "+y
-
-" aux  (=or g;)
-" nnoremap 0 
 nnoremap 0 :set hlsearch!<CR>
 
-" FIXME
 " Toggle 'Linebreak'-mode
 " nnoremap <Leader>L :set linebreak!<CR>
 nnoremap LL :set linebreak!<CR>
@@ -228,17 +206,13 @@ nnoremap Å 
 vnoremap Å <Esc><C-R>gv
 nnoremap Ä u
 vnoremap Ä <Esc>ugv
+" ____ --v ¤
 nnoremap OO gv
-
-" FIXME
-" BREAK OUT of Plugin/Mapping-Mode
-" TODO: Or remap to ,Z
-nnoremap ZZ :norm! 
 
 " __
 " change letter of last added tag
 " nnoremap r hr
-
+" --
 " Repeat word's Tag
 " nnoremap R /[^ ]\ze \\|$<CR>F@vbyP
 
@@ -251,30 +225,31 @@ noremap <Leader>B <Esc>k:s/\n/-/<CR>:nohl<CR>
 " Input, a comma at the end of vmarked text
 vnoremap a <Esc>a,<Esc>gv
 
+" Join current line with next
+nnoremap <Leader>J :norm! J<CR>
+" Split current line
+"   at last space before 37
+nnoremap <Leader>R /\v^.{36}\zs.<CR>:nohl<CR>F s<CR><Esc>
+
   " start/activate v-mark (viw)
   nnoremap <Space> viw
-
   " v-include next word
   vnoremap <Space> E
 
-
 " ------
-
   " TODO: (=add (possibly))
   " read + assign tagstring-line
   " nnoremap qr {+READ IN ' '-SEPARATED TAG-KEY}
 
 " search next tagged
 nnoremap q2 /\a\+@<CR>
-
 " search prev. tagged
 nnoremap q1 ?\a\+@<CR>
 
-  " To next paragr. + to top
-  nnoremap cv }zt<CR>l
-
-  " To prev. paragr. + to top
-  nnoremap qq {{zt<CR>l
+" " To next paragr. + to top
+" nnoremap cv }zt<CR>l
+" " To prev. paragr. + to top
+" nnoremap qq {{zt<CR>l
 
 " Search '+'-string, eg. fr. refdok (pdf, web, etc)
 nnoremap qs "+pu/+<BS><CR>
@@ -284,9 +259,6 @@ nnoremap qs "+pu/+<BS><CR>
 nnoremap qf :tabedit /storage/emulated/0/va/rsc/bmks/
 
 
-" reactivate last v-mark
-nnoremap OO gv
-"" map OO gv
 " Back to top of paragraph
 vnoremap 1 <Esc>{<CR>ztviso
 
@@ -297,7 +269,7 @@ vnoremap 1 <Esc>{<CR>ztviso
 nnoremap GG gqap<CR>zz:up<CR>
 vnoremap G <Esc>gqap:up<CR>gvzt
 vnoremap GG <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>:nohlsearch<CR>gvzt
-" format source-code
+" format source-code  ____
 nnoremap O =iB
 " remove blank bef. next paragr.
 " vnoremap 6 <Esc>}ddgqap:up<CR>gviszt

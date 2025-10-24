@@ -6,7 +6,7 @@
 " termux-open ~/repos/vtouch-vanki/doc/vanki_review-QReview2.png
 "   ~/repos/vtouch-vanki/doc/vanki_review-QReview.png
 
-" TODO
+" TODO TODO RTL-Toggle:
 " ToggleFold:(=fold)
 " ToNextFold:
 " TonextfoldPlusOpenIt: ='Quick-Review'
