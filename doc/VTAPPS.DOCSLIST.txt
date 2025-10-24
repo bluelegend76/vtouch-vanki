@@ -4,6 +4,8 @@ TODO Move to rsc:
   ~/repos/vtouch-vanki/doc/VT_VANKI-DOC.MASTER.xcf
 
 jumplist|navigation:
+    === termux vimrc ===
+     z0/z9  __z0
     === vta.multilines.vim ===
      z1  __z1
     === vta.review.vim ===
@@ -32,8 +34,39 @@ general bindings (=set in init):
  ZE   :bd
 
 -------------------------
-~/Dropbox/bin/scripts/va/
+### ~/Dropbox/bin/scripts/va/
 -------------------------
+
+    z0
+~/path/to/imagefile.png
+    === vta.review.vim ===
+    # basic/shared convenience-mappings
+Tab Convenience:(gt/gT)
+  GTT / GT
+go to First Tab:
+  ,1
+Re-Source Vimrc:
+  ,0 /      ,1 / ,5 / ,3  = :source ~/.vimrc
+FindTriggerNextMisspell:
+  ,SS = ]szz
+  ,S  = z=
+ConvenienceSETTRANSLSHELLTARGETLANG:
+  ,LA )  @@@
+ConvenienceFOLDTOGGLE:(za)  ****
+   X      ×÷■¤
+GotoNextPrev: O=C-O//C-I(JUMPS), Mark, FOLDLEVEL, Change, 
+----
+GotoNextSplitPLUSMaximizeTargetSplit:
+  ,WW
+    @@ c-w c-w WITH MAX-FLIP
+EqualizeSizeOfSplits:
+  ,W
+----
+OPENNEWTAB:(+split etc)
+  GW/GF = c-w gf  GW / GS
+SimpleVisualLineHighlighter:
+  = when visual-line mark active
+      up/down = vertical width stays the same
 
 ## text up | down    (=c-e | c-y)
     # ='reveal text down | up' // 'view down | up'

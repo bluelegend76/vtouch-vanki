@@ -19,14 +19,13 @@
 "  FormatCodeBlock: O
 " TODO ======================================================
 "   JoinCurrLineWithNext: ,J
-"   GoToLastLessthan35_Space: M  # move cursor to 37 + 'F '
+"   GoToLastLessthan35_Space: I??  # move cursor to 37 + 'F '
 " FIXME: Break Out: norm!-läge  ×÷■¤  ,Z                    ZZ
 " SETGLOBALMARK: M (Triggers ':norm! m')  [+ May Moot `Break Out`]
 " FIXME: Separate:(vmap: at end) ',' at `>  " Outpost       a
-" FIXME: Dasher: next / previous
-" FIXME: LineBreaker:(on/off) Quick-flip for 
-"    do not break words at screen-edge'-mode                LL
-" DISMEMBERS: Flip/Jump + (från start-del: push/fetch)
+" FIXME: Dasher: next / previous                            ,E / ,B
+" FIXME: LineBreaker:(on/off)                               LL
+" DISMEMBERS: Flip/Jump (+ from start-piece: push/fetch)
 "   Dasher-FORTIFIED: SEARCH FOR V-MARKED, + REPLACE BLANKS IN THE MIDDLE WITH A DASH
 "      - report number of replacements
 " VisualLine: vnoremap V
