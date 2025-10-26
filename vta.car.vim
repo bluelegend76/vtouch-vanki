@@ -51,7 +51,8 @@ nnoremap 0 <nop>
 
 " }}}
 
-set fdm=marker | nnoremap <space> za
+set fdm=marker
+" | nnoremap <space> za
 
 
 "------- MAPS -------

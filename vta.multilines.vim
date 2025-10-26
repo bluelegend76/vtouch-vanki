@@ -51,7 +51,8 @@ nnoremap 0 <nop>
 
 " }}}
 
-set foldmethod=marker | nnoremap <space> za
+set foldmethod=marker
+" | nnoremap <space> za
 
 "------- MAPS -------
 
