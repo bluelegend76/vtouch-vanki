@@ -81,7 +81,7 @@ OPEN NEW TAB:(+split etc)
   split         GS
   tabedit       GE
 Simple Visual Line Highlighter:
-  (v) Up/Down
+  (v) c-Up/c-Down
 
 
 ## text up | down    (=c-e | c-y)

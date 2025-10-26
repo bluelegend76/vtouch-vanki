@@ -48,12 +48,12 @@ nnoremap Ö <nop>
 nnoremap Å <nop>
 nnoremap Ä <nop>
 nnoremap Z <nop>
-nnoremap X <nop>
+" nnoremap X <nop>
 nnoremap C <nop>
 nnoremap V <nop>
 nnoremap B <nop>
 nnoremap N <nop>
-nnoremap M <nop>
+" nnoremap M <nop>
 " ----
 nnoremap 1 <nop>
 nnoremap 2 <nop>
@@ -89,12 +89,12 @@ vnoremap Ö <nop>
 vnoremap Å <nop>
 vnoremap Ä <nop>
 vnoremap Z <nop>
-vnoremap X <nop>
+" vnoremap X <nop>
 vnoremap C <nop>
 vnoremap V <nop>
 vnoremap B <nop>
 vnoremap N <nop>
-vnoremap M <nop>
+" vnoremap M <nop>
 " ----
 vnoremap 1 <nop>
 vnoremap 2 <nop>
