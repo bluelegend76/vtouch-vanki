@@ -1,6 +1,8 @@
 " ~/Dropbox/bin/scripts/va/vtd.tagging.vim
 " vim:sw=2:fdm=marker:
 
+source ~/.vimrc
+
 " __
 " ~/repos/vtouch-vanki/doc/vimtouch-scrsh_vimankidraft.png
 "
@@ -139,7 +141,12 @@ nnoremap 1 :up<CR>
 
 " aux Esc
 vnoremap 3 <Esc>l
+" aux b
 noremap B <Esc>B
+" aux Enter
+noremap E <CR>
+" nnoremap E <CR>
+" vnoremap E <CR>
 
 inoremap zz <Esc>
 inoremap Zz <Esc>

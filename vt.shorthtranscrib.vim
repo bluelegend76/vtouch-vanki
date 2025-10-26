@@ -1,6 +1,8 @@
 " /storage/emulated/0/vimanki_shorthtranscrib.vim
 " vim:sw=2:fdm=marker:
 
+source ~/.vimrc
+
 " ~/repos/vtouch-vanki/doc/vanki_shorthtranscrib_ADD-ÄX.png
 " Transcribe Text loaded along w. shorthand ref.list(**)  #='ontheroad'
 

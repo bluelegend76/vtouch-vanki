@@ -1,6 +1,8 @@
 " /storage/emulated/0/vimanki_multilines.vim
 " vim:sw=2:fdm=marker:
 
+source ~/.vimrc
+
 " ~/repos/vtouch-vanki/doc/vimtouch-scrsh_vimankidraft.png
 "
 " termux-open ~/repos/vtouch-vanki/doc/vanki_review-QReview2.png
@@ -16,7 +18,7 @@
 " Highlight_STARRED : 
 " TODO 2025: IF 'E490'(No Fold under Cursor), GO TO NEXT FOLD/QUESTION
 
-set foldmethod=marker | nnoremap <space> zt
+set fdm=marker | nnoremap <Space> zt
 
 " Resetting / Blanking the Keyboard {{{
     " orig. = comment away keys used in the script
@@ -64,36 +66,36 @@ nnoremap 8 <nop>
 nnoremap 9 <nop>
 nnoremap 0 <nop>
 
-" vnoremap Q <nop>
-" vnoremap A <nop>
+vnoremap Q <nop>
+vnoremap A <nop>
 vnoremap W <nop>
 vnoremap S <nop>
-" vnoremap E <nop>
-" vnoremap D <nop>
+vnoremap E <nop>
+vnoremap D <nop>
 vnoremap R <nop>
 vnoremap F <nop>
-" vnoremap T <nop>
-" vnoremap G <nop>
-" vnoremap Y <nop>
-" vnoremap H <nop>
-" vnoremap U <nop>
-" vnoremap J <nop>
-" vnoremap I <nop>
-" vnoremap K <nop>
-" vnoremap O <nop>
-" vnoremap L <nop>
-" vnoremap P <nop>
-" vnoremap Ö <nop>
-" vnoremap Å <nop>
-" vnoremap Ä <nop>
-" vnoremap Z <nop>
-" vnoremap X <nop>
-" vnoremap C <nop>
-" vnoremap V <nop>
-" vnoremap B <nop>
-" vnoremap N <nop>
-" vnoremap M <nop>
-" " ----
+vnoremap T <nop>
+vnoremap G <nop>
+vnoremap Y <nop>
+vnoremap H <nop>
+vnoremap U <nop>
+vnoremap J <nop>
+vnoremap I <nop>
+vnoremap K <nop>
+vnoremap O <nop>
+vnoremap L <nop>
+vnoremap P <nop>
+vnoremap Ö <nop>
+vnoremap Å <nop>
+vnoremap Ä <nop>
+vnoremap Z <nop>
+vnoremap X <nop>
+vnoremap C <nop>
+vnoremap V <nop>
+vnoremap B <nop>
+vnoremap N <nop>
+vnoremap M <nop>
+" ----
 vnoremap 1 <nop>
 vnoremap 2 <nop>
 vnoremap 3 <nop>
@@ -103,95 +105,88 @@ vnoremap 6 <nop>
 vnoremap 7 <nop>
 vnoremap 8 <nop>
 vnoremap 9 <nop>
-" vnoremap 0 <nop>
+vnoremap 0 <nop>
 
 " }}}
 
-nnoremap gg g;
-nnoremap tt zt
- inoremap zz <Esc>
- inoremap ZZ <Esc>
- inoremap Zz <Esc>
-
- 
 "------- MAPS -------
 
 " auxilliary (=numberpad)
-" back one q
-nnoremap 4 zk2-zt2
+" back one question
+nnoremap 4 zk2-zt2<CR>
     " Save file (*!)
-nnoremap 3 :up
+nnoremap 3 :up<CR>
     "
-" Refact: 'reset vanki-block'
-nnoremap 00 {/----dd}-p{ndd{p:let @/='.*@.\=$'
-" "Ripple-reset vanki-blocks"
-nnoremap 09 {/----dd}-p{ndd{p}zt:let @/='.*@.\=$'
+"" " Refact: 'reset vanki-block'
+"" nnoremap 00 {/----<CR>dd}-p{ndd{p<CR>:let @/='.*@.\=$'<CR>
+"" " "Ripple-reset vanki-blocks"
+"" nnoremap 09 {/----<CR>dd}-p{ndd{p<CR>}zt<CR>:let @/='.*@.\=$'<CR>
+    " --
+
 " query tags(**)  =  '/' + highl. l. =next @-tagged(****)
-nnoremap qs :setlocal hlsearch/.*@.\=$
+nnoremap qs :setlocal hlsearch<CR>/.*@.\=$<CR><CR>
 " reset highlighting
-nnoremap 0 :setlocal nohlsearch
+nnoremap 0 :setlocal nohlsearch<CR>
 
 " main (=keyspad) ------ 
-    " OPEN/CLOSE: show/hide post
-nnoremap E za
-nnoremap R za
-nnoremap T za
-nnoremap D za
-nnoremap F za
-nnoremap G za
     " 'quickreview' (=view next a. directly)
-"nnoremap Q zmzj--ztzjzo
 nnoremap Q zmzj--ztzjzo
 nnoremap W zmzj--ztzjzo
 nnoremap A zmzj--ztzjzo
 nnoremap S zmzj--ztzjzo
+    " OPEN/CLOSE: show/hide post
+" nnoremap E za
+nnoremap R za
+nnoremap T za
+" nnoremap D za
+nnoremap F za
+nnoremap G za
     " NEXT Q:
-nnoremap Y zmzj--ztzj
+" nnoremap Y zmzj--ztzj
 nnoremap U zmzj--ztzj
 nnoremap I zmzj--ztzj
-nnoremap H zmzj--ztzj
+" nnoremap H zmzj--ztzj
 nnoremap J zmzj--ztzj
 nnoremap K zmzj--ztzj
 
     " Flip ltr/rtl:
-nnoremap O :setlocal rightleft!
-nnoremap P :setlocal rightleft!
-nnoremap L :setlocal rightleft!
-nnoremap Ö :setlocal rightleft!
+nnoremap RL :setlocal rightleft!<CR>
+" nnoremap O :setlocal rightleft!<CR>
+" nnoremap P :setlocal rightleft!<CR>
+" nnoremap L :setlocal rightleft!<CR>
+" nnoremap Ö :setlocal rightleft!<CR>
 
     " SHOW UP: line/post to 'later'-block (*)
-nnoremap Z 
-nnoremap X 
-nnoremap C 
+" nnoremap Z <C-E>
+nnoremap X <C-E>
+nnoremap C <C-E>
     " SHOW DOWN: line/post to 'later'-block (*)
-nnoremap B 
-nnoremap N 
-nnoremap M 
-
+nnoremap B <C-Y>
+nnoremap N <C-Y>
+" nnoremap M <C-Y>
 
 
 " ---- 'star' prev. q-line (fr. open a-fold*)
-nnoremap QA zm-$a (@):up
-nnoremap QQ zm-$a @:up
-nnoremap Q1 zm-$a @(@):up
-nnoremap Q2 zm-$a @@:up
-nnoremap Q3 zm-$a @@(@):up
-nnoremap Q4 zm-$a @@ @:up
+nnoremap QA zm-$a (@)<Esc><CR>:up<CR>
+nnoremap QQ zm-$a @<Esc><CR>:up<CR>
+nnoremap Q1 zm-$a @(@)<Esc><CR>:up<CR>
+nnoremap Q2 zm-$a @@<Esc><CR>:up<CR>
+nnoremap Q3 zm-$a @@(@)<Esc><CR>:up<CR>
+nnoremap Q4 zm-$a @@ @<Esc><CR>:up<CR>
 " nnoremap QQ zMzkzt
 " --
-nnoremap Å6 mo$a (!)`o
-nnoremap Å7 mo$a (!!)`o
-nnoremap Å8 mo$a (??)`o
-nnoremap Å0 mo$a *`o
-nnoremap Å9 mo$a **(*)`o
-nnoremap ÅÅ mo$a **`o
+"" nnoremap Å6 mo$a (!)<Esc>`o
+"" nnoremap Å7 mo$a (!!)<Esc>`o
+"" nnoremap Å8 mo$a (??)<Esc>`o
+"" nnoremap Å0 mo$a *<Esc>`o
+"" nnoremap Å9 mo$a **(*)<Esc>`o
+"" nnoremap ÅÅ mo$a **<Esc>`o
 
 " nnoremap O <nop>
 " nnoremap L <nop>
-nnoremap Å <nop>
-nnoremap Ä <nop>
-
-unmap YY
-nunmap ZZ
-nunmap zz
+" nnoremap Å <nop>
+" nnoremap Ä <nop>
+" unmap YY
+" nunmap ZZ
+" nunmap zz
 

@@ -3,6 +3,10 @@
 TODO Move to rsc:
   ~/repos/vtouch-vanki/doc/VT_VANKI-DOC.MASTER.xcf
 
+- SYNTAX/SPELL ON/OFF
+- Tagging - (v)E: = aux Enter
+  - Autoset translation-language
+
 jumplist|navigation:
     === termux vimrc ===
      z0/z9  __z0
@@ -41,9 +45,9 @@ general bindings (=set in init):
     z0
 ~/path/to/imagefile.png
 save/update           ,,
-break out (norm! )    ,Z
+break out (norm!)     ,Z
 Prepare setting
-  File-level mark     M
+  file-level mark     M
     === vta.review.vim ===
     # basic/shared convenience-mappings
 Tab gt/gT:
@@ -59,12 +63,12 @@ ConvenienceSETTRANSLSHELLTARGETLANG:
   ,LA  @@@
 ConvenienceFOLDTOGGLE:(za)  ****
    X      ×÷■¤
-Navigation 'GotoNextPrev':
-  JUMPS       up/down
+Navigation 'Goto Next/Prev':
+  Changes     up/down
+  JUMPS       s-up/s-down
     (c-o/c-i)
-  Mark        s-up/s-down
+  Mark        a-up/a-down
   FOLDLEVEL   right/left
-  Change      a-up/a-down
 ----
 GotoNextSplitPLUSMaximizeTargetSplit:
   ,WW
@@ -114,16 +118,16 @@ reset hl.            0
     z2  __z2
 ~/repos/vtouch-vanki/doc/vanki_review-QReview.png
     === vta.review.vim ===
-save                3
- up one q.           4
-reset pract.block   00
-ripple-reset block   09
+save                  3
+ up one q.            4
+## reset pract.block    00
+## ripple-reset block   09
 ----
-show | hide q.      ERT.DFG
  speedreview(*)      QW.AS
-next post + c-e     YUI.HJK
- text up | down      ZXC | BNM
-flip ltr/rtl (!)     OP.LÖ
+show | hide q.      RT.FG
+next post + c-e     UI.JK
+ text up | down      XC | BN
+flip ltr/rtl         RL
 --
  tag '(@)'            QA
  tag '@'              QQ
@@ -261,6 +265,7 @@ Load refblock       R
     === vtd.tagging.vim ===
 save                1
 v-esc(+'l')         3
+aux-Enter           E
 Undo | Redo (!)     Ä | Å
 --
  (n)gv               OO     ¤

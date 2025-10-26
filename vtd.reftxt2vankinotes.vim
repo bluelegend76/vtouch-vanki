@@ -1,5 +1,7 @@
 " vim:sw=2:fdm=marker:
 
+source ~/.vimrc
+
 " ~/repos/vtouch-vanki/doc/Reftxt2Vankinotes.xcf
 " ~/repos/vtouch-vanki/doc/Reftxt2Vankinotes.png
 

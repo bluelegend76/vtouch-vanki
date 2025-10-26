@@ -1,7 +1,55 @@
 " /storage/emulated/0/vimanki_multilines.vim
 " vim:sw=2:fdm=marker:
 
+source ~/.vimrc
+
 " ~/repos/vtouch-vanki/doc/vanki_Multiline-BetterUndo--AddFuncts.png
+
+" Reset/Blanking 'reverse keyb.' {{{
+
+"------- NOPS -------- (=deadkeys)
+nnoremap Q <nop>
+nnoremap A <nop>
+nnoremap W <nop>
+nnoremap S <nop>
+nnoremap E <nop>
+nnoremap D <nop>
+nnoremap R <nop>
+nnoremap F <nop>
+nnoremap T <nop>
+nnoremap G <nop>
+nnoremap Y <nop>
+nnoremap H <nop>
+nnoremap U <nop>
+nnoremap J <nop>
+nnoremap I <nop>
+nnoremap K <nop>
+nnoremap O <nop>
+nnoremap L <nop>
+nnoremap P <nop>
+nnoremap Ö <nop>
+nnoremap Å <nop>
+nnoremap Ä <nop>
+nnoremap Z <nop>
+nnoremap X <nop>
+nnoremap C <nop>
+nnoremap V <nop>
+nnoremap B <nop>
+nnoremap N <nop>
+nnoremap M <nop>
+" ----
+nnoremap 1 <nop>
+nnoremap 2 <nop>
+nnoremap 3 <nop>
+nnoremap 4 <nop>
+nnoremap 5 <nop>
+nnoremap 6 <nop>
+nnoremap 7 <nop>
+nnoremap 8 <nop>
+nnoremap 9 <nop>
+nnoremap 0 <nop>
+
+" }}}
 
 set foldmethod=marker | nnoremap <space> za
 
@@ -56,28 +104,6 @@ nnoremap B 
 nnoremap N 
 nnoremap M 
 
-
-"------- NOPS -------- (=deadkeys)
-nnoremap Q <nop>
-nnoremap A <nop>
-nnoremap R <nop>
-nnoremap F <nop>
-nnoremap I <nop>
-nnoremap K <nop>
-nnoremap Å <nop>
-nnoremap Ä <nop>
-nnoremap V <nop>
-" ----
-" nnoremap 1 <nop>
-nnoremap 2 <nop>
-" nnoremap 3 <nop>
-" nnoremap 4 <nop>
-nnoremap 5 <nop>
-" nnoremap 6 <nop>
-" nnoremap 7 <nop>
-nnoremap 8 <nop>
-nnoremap 9 <nop>
-" nnoremap 0 <nop>
 
 
 "zmzj2  (=next post)
