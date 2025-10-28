@@ -4,6 +4,7 @@ TODO Move to rsc:
   ~/repos/vtouch-vanki/doc/VT_VANKI-DOC.MASTER.xcf
 
 - SYNTAX/SPELL ON/OFF
+CI<CaseInsensitivityToggle>, ST<SyntaxToggle>, SY<SetSyntax>
   - Autoset translation-language
 - Double-check Arrow-keys_mappings
 ----
