@@ -4,25 +4,38 @@ TODO Move to rsc:
   ~/repos/vtouch-vanki/doc/VT_VANKI-DOC.MASTER.xcf
 
 - SYNTAX/SPELL ON/OFF
-- Tagging - (v)E: = aux Enter
   - Autoset translation-language
+- Double-check Arrow-keys_mappings
+----
+----
+ShorthandTranscribe:
+- Open classic Vim-split(=horizontal) on reffile (to pull transcription-keys from)
+----
+FOR ACTIVE PLUGIN (=MAP-SET): RUNNING :DOC WILL OPEN DOC-IMAGE(!!)
+TODO Car: May want to pack several Areas into 1 pack or capability (+possible rename: vta.Nano)
+    POSSIBLE FUTURE TODO: WRITE VIMDOC DOCUMENTATION FOR VT-SUITE
+MultiLines (etc)
+- If fdm=marker =Classic behavior;
+  if fdm=indent (like language-practice) =New/added behav. (2025-2026)
+
 
 jumplist|navigation:
     === termux vimrc ===
      z0/z9  __z0
-    === vta.multilines.vim ===
+
+ === vta.multilines.vim ===
      z1  __z1
     === vta.review.vim ===
      z2  __z2
     === vta.car.vim ===
      z3  __z3
-    === vtd.reftxt2vankinotes.vim ===
+=== vtd.reftxt2vankinotes.vim ===
      z4  __z4
-    === vt.shorthtranscrib.vim ===
+=== vt.shorthtranscrib.vim ===
      z5  __z5
     === vtd.tagging.vim ===
      z6  __z6
-    === vtd.svsyndb-tag.vim ===
+ === vtd.svsyndb-tag.vim ===
      z7  __z7
     === vtd.dualist.vim ===
      z8  __z8
@@ -34,7 +47,6 @@ New VTA-script Ideas[!!]:
 general bindings (=set in init):
  ZF   edit init
  ZFF  edit vtouchrc
- ZT   line to top (of screen)
  ZE   :bd
 
 -------------------------
@@ -42,20 +54,36 @@ general bindings (=set in init):
 -------------------------
 
 
+ ZT   line to top (of screen)
+
     z0
 ~/path/to/imagefile.png
+~/conf/termux/.vimrc
+    === termux .vimrc ===
+    # = basic/shared convenience-mappings
 save/update           ,,
 break out (norm!)     ,Z
+  Run Line (as shell-cmdline)  RU
+   uncomment + --- " ---        UR
+  Run Line (as Ex-cmdline)     EX
+   uncomment + --- " ---        UX
 Prepare setting
   file-level mark     M
-    === vta.review.vim ===
-    # basic/shared convenience-mappings
+----
 Tab gt/gT:
   GTT / GT
 go to First Tab:
   ,1
 Re-Source Vimrc:
   ,0 /      ,1 / ,5 / ,3  = :source ~/.vimrc
+----
+Rotate Color-Scheme (Back/Forw) ****
+  C<Space> / CB
+activate col-scheme by name
+  ,C
+report curr. active col.scheme
+  ,CC
+----
 Go to/Trigger Next Misspell:
   ,SS = ]szz
   ,S  = z=
@@ -93,6 +121,7 @@ Newer Idiom: Clear Whole Rev-Maps %
 
     z1  __z1
 ~/repos/vtouch-vanki/doc/vanki_Multiline-BetterUndo--AddFuncts.png
+~/repos/vtouch-vanki/vta.multilines.vim
     ## aux 'n' + 'zt - 1'
     === vta.multilines.vim ===
     # =basic shuffle-review(**)
@@ -117,6 +146,7 @@ reset hl.            0
 
     z2  __z2
 ~/repos/vtouch-vanki/doc/vanki_review-QReview.png
+~/repos/vtouch-vanki/vta.review.vim ===
     === vta.review.vim ===
 save                  3
  up one q.            4
@@ -141,6 +171,7 @@ reset hl.            0
 
     z3  __z3
 ~/repos/vtouch-vanki/doc/vanki_car-ChangeUndo.png
+~/repos/vtouch-vanki/vta.car.vim
     === vta.car.vim ===
 save                5 @
  to prev. q. *(!)    4 @@(@)
@@ -166,6 +197,7 @@ reset hl.            0
     z4  __z4
 ~/repos/vtouch-vanki/doc/Reftxt2Vankinotes.xcf
 ~/repos/vtouch-vanki/doc/Reftxt2Vankinotes.png
+~/repos/vtouch-vanki/vtd.reftxt2vankinotes.vim
     === vtd.reftxt2vankinotes.vim ===# add 'Zz' = Esc
 # Refact|Del(??): ZX (=next paragr.(??))  %
 # TODO REFACT: Binary Modes Switch
@@ -236,6 +268,7 @@ del. line       DD
 
     z5  __z5
 ~/repos/vtouch-vanki/doc/vanki_shorthtranscrib_ADD-ÄX.png
+~/repos/vtouch-vanki/vt.shorthtranscrib.vim
     === vt.shorthtranscrib.vim ===
 # ic, hlsearch, incsearch
 to top ref 1|2      1, 2
@@ -262,6 +295,7 @@ Load refblock       R
     z6  __z6
 ~/repos/vtouch-vanki/doc/Tagging.xcf
 ~/repos/vtouch-vanki/doc/Tagging.png
+~/repos/vtouch-vanki/vtd.tagging.vim
     === vtd.tagging.vim ===
 save                1
 v-esc(+'l')         3
@@ -319,6 +353,7 @@ vmark sent. *             5|6
 
 
     z7  __z7
+~/repos/vtouch-vanki/vtd.svsyndb-tag.vim
     === vtd.svsyndb-tag.vim ===
 save                3|4
 split long line     6|7  # next ' ' = '@@\n@@'
@@ -345,6 +380,7 @@ Ny Temp(**(!!)): mute-reftagging(=2021++)
 
 
     z8  __z8
+~/repos/vtouch-vanki/vtd.dualist.vim
     === vtd.dualist.vim ===
     # nohlsearch, foldmethod=marker
 # New!  transpose word(!!)   #=for rearr.ing '_tag'-order  (=for searching multitags)

@@ -217,7 +217,7 @@ vnoremap Ä <Esc>ugv
 nnoremap OO gv
 
 " Convenience-mapping Line-wise visual-mark
-" nnoremap V :norm! V<CR>
+nnoremap V :norm! V<CR>
 
 " __
 " change letter of last added tag
