@@ -55,7 +55,6 @@ general bindings (=set in init):
 -------------------------
 
 
- ZT   line to top (of screen)
 
     z0
 ~/path/to/imagefile.png
@@ -70,6 +69,9 @@ break out (norm!)     ,Z
    uncomment + --- " ---        UX
 Prepare setting
   file-level mark     M
+----
+line to top (of screen)
+  ZT
 ----
 Tab gt/gT:
   GTT / GT
@@ -106,9 +108,12 @@ EqualizeSizeOfSplits:
   ,W
 ----
 OPEN NEW TAB:(+split etc)
-  c-w gf        GF
-  split         GS
+  tabedit on filename (c-w gf)
+    GF
+  split on filename
+    GH
   tabedit       GE
+  split         GS
 Simple Visual Line Highlighter:
   (v) c-Up/c-Down
 
