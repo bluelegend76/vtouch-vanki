@@ -112,6 +112,8 @@ OPEN NEW TAB:(+split etc)
     GF
   split on filename
     GH
+  splitopen file 'in the bground'
+    GB
   tabedit       GE
   split         GS
 Simple Visual Line Highlighter:
