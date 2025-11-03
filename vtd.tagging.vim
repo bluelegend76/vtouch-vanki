@@ -127,11 +127,6 @@ vnoremap 9 <nop>
 " - 'STAIRSTEP-WISE' INDENT CODE-BLOCK
 " - FORMAT NEXT CODE-BLOCK
 
-let @c='viw"aywviw"by'
-let @e='ma:.,$s/\vasb/-/g`a'
-let @s='\zs( |\n\s*)\ze'
-let @r='@c@e'
-
 set hlsearch
 set textwidth=35
 " ------- aux (=numpad) -------
@@ -208,11 +203,6 @@ nnoremap A biA@<Esc>
 "" " Capitalize word's tags(!!)
 "" nnoremap C ma/[^ ]\ze \\|$<CR>F@mtviW`tU`a:nohlsearch<CR>:up<CR>
 
-" aux Redo|Undo
-nnoremap Å 
-vnoremap Å <Esc><C-R>gv
-nnoremap Ä u
-vnoremap Ä <Esc>ugv
 " ____ --v ¤
 nnoremap OO gv
 
@@ -227,16 +217,6 @@ nnoremap V :norm! V<CR>
 " nnoremap R /[^ ]\ze \\|$<CR>F@vbyP
 
 " FIXME
-" DASH_NEXT / DASH_PREV
-noremap <Leader>E <Esc>f s-<Esc>
-noremap <Leader>B <Esc>k:s/\n/-/<CR>:nohl<CR>
-
-" FIXME
-" Input, a comma at the end of vmarked text
-vnoremap a <Esc>a,<Esc>gv
-
-" Join current line with next
-nnoremap <Leader>J :norm! J<CR>
 " Split current line
 "   at last space before 37
 nnoremap <Leader>R /\v^.{36}\zs.<CR>:nohl<CR>F s<CR><Esc>

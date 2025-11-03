@@ -64,69 +64,69 @@ set incsearch
 "  ( 'n  (??) )
 
 " <space>  = to 'Next Word' (??/*****)
-"nnoremap <space> 
+"nnoremap <space> <CR>
 
 
 "------- MAPS -------
 
 " auxilliary (=numberpad)
     " g; (??)
-nnoremap 1 /-- refstart 1:nohlsearchzt3
-nnoremap 2 /-- refstart 2:nohlsearchzt3
+nnoremap 1 /-- refstart 1<CR>:nohlsearch<CR>zt3
+nnoremap 2 /-- refstart 2<CR>:nohlsearch<CR>zt3
     " Save file (*!)
-" nnoremap 3 :up
-nnoremap 4 :up
+" nnoremap 3 :up<CR>
+nnoremap 4 :up<CR>
 " Split Long Lines (+leave mark for Undoing (**))
     " Split Line (=for readability)
-" nnoremap 6 f,f s@@0@@
+" nnoremap 6 f,f s@@<CR>0@@
     "MAYBE: g; (****)
-" nnoremap 7 f,f s@@0@@
+" nnoremap 7 f,f s@@<CR>0@@
     " V-mark line
 " nnoremap 9 V
     " clear hlsearch
-nnoremap 0 :nohlsearch
+nnoremap 0 :nohlsearch<CR>
 
 
 " main (=keyspad) ------ 
 
 " go to (+mark) next word **
 nnoremap <Space> viwmm
-vnoremap <Space> /\v<[A-ZÅÄÖa-zåäö]:nohlsearchvemm
+vnoremap <Space> /\v<[A-ZÅÄÖa-zåäö]<CR>:nohlsearch<CR>vemm
 
 "?? vmark word
     "
 " - Searchprompt (/) as quickfunction
-    " nnoremap ??<space??> mm/-- refstart/\C  \zs
+    " nnoremap ??<space??> mm/-- refstart<CR>/\C  \zs
 " wordcut + search
-    nnoremap W "syiwemm/-- refstart/s
+    nnoremap W "qyiwemm/-- refstart<CR>/<C-R>q<CR>
 " vis-cut + search
-    " vnoremap V mm"sy`m/-- refstart/s
-    vnoremap V bemmgv"sy/-- refstart/s
+    " vnoremap V mm"qy`m/-- refstart<CR>/<C-R>q<CR>
+    vnoremap V bemmgv"qy/-- refstart<CR>/<C-R>q<CR>
 " vis-cut + eXact search (*)
-    vnoremap X bemmgv"sy/-- refstart/^\ss  
+    vnoremap X bemmgv"qy/-- refstart<CR>/^\s<C-R>q  <CR>
 " search key/answer-string(**)
-    nnoremap K mm/-- refstart/\C  \zs
+    nnoremap K mm/-- refstart<CR>/\C  \zs
 " mark word-ending  #+perhaps add `` (=mark + pull back to exact pos.)
     nnoremap M mcemm`c
 " back  #(keep '0' as nohlsearch)
     nnoremap O `mzt
 " yank k-line + return and paste
-    nnoremap Y "yyy'mp`mzt/  /e+1d0/  d$v0"kydd`mzta[k]
+    nnoremap Y "yyy'mp`mzt/  /e+1<CR>d0/  <CR>d$v0"kydd`mzta[<C-R>k]
     "  yy'mp`m3   =orig
 " pull k-string directly  (for v-marked)
-    vnoremap D mm"sy`m/-- refstart/^\s*\zssyy'mp/  /e+1d0/  d$v0"kydd`mzta[k]
+    vnoremap D mm"qy`m/-- refstart<CR>/^\s*\zs<C-R>q<CR>yy'mp/  /e+1<CR>d0/  <CR>d$v0"kydd`mzta[<C-R>k]
 " orig-draft (=for debugging) {{{
-"   mm"sy`m/^\s\+\zss
+"   mm"qy`m/^\s\+\zs<C-R>q<CR>
 "    - copy shorth. keystring-line
 "   yy
 "    - pull  back + paste line
 "   'mp
 "    - del. to double blank + f' ' + d$
-"   /  /e+1d0/  d$
+"   /  /e+1<CR>d0/  <CR>d$
 "    - cut string + del. line
 "   v0"kydd
-"    - back to mark m + append [k]
-"   `mzt3a[k]
+"    - back to mark m + append [<C-R>k]
+"   `mzt3a[<C-R>k]
 " }}}
 " open k-string-brackets (at end of word)
         " E-->A
@@ -146,17 +146,17 @@ vnoremap <Space> /\v<[A-ZÅÄÖa-zåäö]:nohlsearchvemm
 
 " " UTIL MACROS (**(*))
 " " scramble
-" @s=":'<,'>!sort -R"
+" @s=":'<,'>!sort -R<CR>"
 " " invert lines
-" @i=":'<,'>s/\v^([^;]+) ; ([^;]+)/\2 ; \1/g"
+" @i=":'<,'>q/\v^([^;]+) ; ([^;]+)/\2 ; \1/g<CR>"
 " " Fill
-" @f=":'<,'>s/\v(.{-})\ze ; (.*)/\1\r\{\{\{\r\t\2 \}\}\}/ggv:'<,'>s/\v\}\}\}\zs.*//g"
+" @f=":'<,'>q/\v(.{-})\ze ; (.*)/\1\r\{\{\{\r\t\2 \}\}\}/g<CR>gv<CR>:'<,'>q/\v\}\}\}\zs.*//g<CR>"
 " " Empty
-" @e=":'<,'>s/\v^(.*$)\n\{\{\{\n\s*([^ }]+) \}\}\}/\1 ; \2/g"
+" @e=":'<,'>q/\v^(.*$)\n\{\{\{\n\s*([^ }]+) \}\}\}/\1 ; \2/g<CR>"
 " " ----
 " " out (=sub/accordion lines)
-" @o=":'<,'>s/\v,,/\r\t/g"
+" @o=":'<,'>q/\v,,/\r\t/g<CR>"
 " " in (=sub/accordion lines)
-" @b=":'<,'>s/\v\n\t/,,/g:'<,'>s/,,/\r\t/"
+" @b=":'<,'>q/\v\n\t/,,/g<CR>:'<,'>q/,,/\r\t/<CR>"
 
 

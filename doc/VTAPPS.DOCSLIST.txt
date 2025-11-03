@@ -1,3 +1,6 @@
+__
+TODO: TEST OUT NEW MOUSE-BINDINGS[!!!!]
+
 ~/repos/vtouch-vanki/doc/vimtouch-scrsh_vimankidraft.png
 ~/repos/vtouch-vanki/doc/rsc/keyboard-termux.jpg
 TODO Move to rsc:
@@ -55,7 +58,6 @@ general bindings (=set in init):
 -------------------------
 
 
-
     z0
 ~/path/to/imagefile.png
 ~/conf/termux/.vimrc
@@ -71,8 +73,15 @@ Prepare setting
   file-level mark     M
 ----
 line to top (of screen)
-  ZT
+  ZT (n+v)
+Aux Undo/Redo       Ä Å
+  (n,v) Rmouse / Dclick Rmouse
+Aux Esc   zz / Rmouse, Lmouse
+conven. mappings 0/$
+  H / L
 ----
+Flip ltr/rtl         RL
+--
 Tab gt/gT:
   GTT / GT
 go to First Tab:
@@ -83,7 +92,7 @@ Re-Source Vimrc:
 Rotate Color-Scheme (Back/Forw) ****
   C<Space> / CB
 activate col-scheme by name
-  ,C
+  ,cc
 report curr. active col.scheme
   ,CC
 ----
@@ -94,11 +103,11 @@ ConvenienceSETTRANSLSHELLTARGETLANG:
   ,LA  @@@
 ConvenienceFOLDTOGGLE:(za)  ****
    X      ×÷■¤
-Navigation 'Goto Next/Prev':
-  Changes     up/down
+NAVIGATION 'GOTO NEXT/PREV':
+  Changes     a-up/a-down
   JUMPS       s-up/s-down
     (c-o/c-i)
-  Mark        a-up/a-down
+  Mark        c-up/c-down
   FOLDLEVEL   right/left
 ----
 GotoNextSplitPLUSMaximizeTargetSplit:
@@ -117,7 +126,7 @@ OPEN NEW TAB:(+split etc)
   tabedit       GE
   split         GS
 Simple Visual Line Highlighter:
-  (v) c-Up/c-Down
+  (v) Up/Down
 
 
 ## text up | down    (=c-e | c-y)
@@ -161,11 +170,13 @@ save                  3
 ## reset pract.block    00
 ## ripple-reset block   09
 ----
- speedreview(*)      QW.AS
-show | hide q.      RT.FG
-next post + c-e     UI.JK
- text up | down      XC | BN
-flip ltr/rtl         RL
+ speedreview(*)  QW
+                 AS
+show | hide q.     RT  __
+                   FG
+next post + c-e       UI
+                      JK
+ viewport down     BN
 --
  tag '(@)'            QA
  tag '@'              QQ

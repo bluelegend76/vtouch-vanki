@@ -112,8 +112,8 @@ vnoremap 0 <nop>
 "------- MAPS -------
 
 " auxilliary (=numberpad)
-" back one question
-nnoremap 4 zk2-zt2<CR>
+" back/up one question
+nnoremap 4 zkzM2-ztzj
     " Save file (*!)
 nnoremap 3 :up<CR>
     "
@@ -149,8 +149,6 @@ nnoremap I zmzj--ztzj
 nnoremap J zmzj--ztzj
 nnoremap K zmzj--ztzj
 
-    " Flip ltr/rtl:
-nnoremap RL :setlocal rightleft!<CR>
 " nnoremap O :setlocal rightleft!<CR>
 " nnoremap P :setlocal rightleft!<CR>
 " nnoremap L :setlocal rightleft!<CR>
@@ -158,12 +156,11 @@ nnoremap RL :setlocal rightleft!<CR>
 
     " SHOW UP: line/post to 'later'-block (*)
 " nnoremap Z <C-E>
-nnoremap X <C-E>
-nnoremap C <C-E>
+" nnoremap X <C-E>
+" nnoremap C <C-E>
     " SHOW DOWN: line/post to 'later'-block (*)
-nnoremap B <C-Y>
-nnoremap N <C-Y>
-" nnoremap M <C-Y>
+nnoremap B <C-E>
+nnoremap N <C-E>
 
 
 " ---- 'star' prev. q-line (fr. open a-fold*)
@@ -172,7 +169,7 @@ nnoremap QQ zm-$a @<Esc><CR>:up<CR>
 nnoremap Q1 zm-$a @(@)<Esc><CR>:up<CR>
 nnoremap Q2 zm-$a @@<Esc><CR>:up<CR>
 nnoremap Q3 zm-$a @@(@)<Esc><CR>:up<CR>
-nnoremap Q4 zm-$a @@ @<Esc><CR>:up<CR>
+nnoremap Q4 zm-$a @@@<Esc><CR>:up<CR>
 " nnoremap QQ zMzkzt
 " --
 "" nnoremap Å6 mo$a (!)<Esc>`o
