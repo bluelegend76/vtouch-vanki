@@ -1,5 +1,6 @@
 __
 TODO: TEST OUT NEW MOUSE-BINDINGS[!!!!]
+'GO TO SOURCE-FILE OF LATEST RUN COMMAND' ****
 
 ~/repos/vtouch-vanki/doc/vimtouch-scrsh_vimankidraft.png
 ~/repos/vtouch-vanki/doc/rsc/keyboard-termux.jpg
@@ -64,6 +65,7 @@ general bindings (=set in init):
     === termux .vimrc ===
     # = basic/shared convenience-mappings
 save/update           ,,
+                  (v) ,
 break out (norm!)     ,Z
   Run Line (as shell-cmdline)  RU
    uncomment + --- " ---        UR
@@ -79,8 +81,22 @@ Aux Undo/Redo       Ä Å
 Aux Esc   zz / Rmouse, Lmouse
 conven. mappings 0/$
   H / L
-----
+---- Translation-Utilities (TShell etc)
 Flip ltr/rtl         RL
+ --
+Translate ----
+Brief (=all langs)   ,TT
+Standard (=longer)   ,TR
+quick (=just en/sv)  ,TQ
+to end of line       ,TE
+sentence (vis)       ,TS
+brief + Choose Lang  ,TL
+Choose Lang (+long)  ,TP
+  --
+ConvenienceSETTRANSLSHELLTARGETLANG:
+  ,LA  @@@
+Default Languages  TODO TODO!!
+  ,DL
 --
 Tab gt/gT:
   GTT / GT
@@ -99,8 +115,6 @@ report curr. active col.scheme
 Go to/Trigger Next Misspell:
   ,SS = ]szz
   ,S  = z=
-ConvenienceSETTRANSLSHELLTARGETLANG:
-  ,LA  @@@
 ConvenienceFOLDTOGGLE:(za)  ****
    X      ×÷■¤
 NAVIGATION 'GOTO NEXT/PREV':
@@ -127,6 +141,9 @@ OPEN NEW TAB:(+split etc)
   split         GS
 Simple Visual Line Highlighter:
   (v) Up/Down
+  (v) MScroll
+down
+  (v) ,,
 
 
 ## text up | down    (=c-e | c-y)
