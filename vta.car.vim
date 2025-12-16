@@ -28,8 +28,8 @@ nnoremap O <nop>
 nnoremap L <nop>
 nnoremap P <nop>
 nnoremap Ö <nop>
-nnoremap Å <nop>
-nnoremap Ä <nop>
+" nnoremap Å <nop>
+" nnoremap Ä <nop>
 nnoremap Z <nop>
 " nnoremap X <nop>
 nnoremap C <nop>

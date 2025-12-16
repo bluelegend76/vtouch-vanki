@@ -86,8 +86,8 @@ vnoremap O <nop>
 vnoremap L <nop>
 vnoremap P <nop>
 vnoremap Ö <nop>
-vnoremap Å <nop>
-vnoremap Ä <nop>
+" vnoremap Å <nop>
+" vnoremap Ä <nop>
 vnoremap Z <nop>
 " vnoremap X <nop>
 vnoremap C <nop>
