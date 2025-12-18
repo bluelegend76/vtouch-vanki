@@ -1,5 +1,5 @@
-" ~/Dropbox/bin/scripts/va/vtd.tagging.vim
 " vim:sw=2:fdm=marker:
+" ~/Dropbox/bin/scripts/va/vtd.tagging.vim
 
 source ~/.vimrc
 
@@ -252,15 +252,20 @@ nnoremap qf :tabedit /storage/emulated/0/va/rsc/bmks/
 " Back to top of paragraph
 vnoremap 1 <Esc>{<CR>ztviso
 
+" Move screen Up/Down (half a screen)
+nnoremap U <C-U>
+nnoremap D <C-D>
+
 " format paragr. acc. to text-width (etc)
 " nnoremap 00 /^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>
 " vnoremap OO <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>gvzt
 " vnoremap O <Esc>gqap:up<CR>gvzt
-nnoremap GG gqap<CR>zz:up<CR>
+nnoremap GG mmgqap{`m:up<CR>
 vnoremap G <Esc>gqap:up<CR>gvzt
-vnoremap GG <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>:nohlsearch<CR>gvzt
+" FIXME: TEMPORARILY DISABLED ---v
+"" vnoremap GG <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>:nohlsearch<CR>gvzt
 " format source-code  ____
-nnoremap O =iB
+nnoremap O /{<CR>:nohl<CR>=iB
 " remove blank bef. next paragr.
 " vnoremap 6 <Esc>}ddgqap:up<CR>gviszt
 vnoremap 6 <Esc>}dd``visoztgq:up<CR>gv
