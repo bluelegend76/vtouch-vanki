@@ -260,7 +260,8 @@ nnoremap D <C-D>
 " nnoremap 00 /^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>
 " vnoremap OO <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>gvzt
 " vnoremap O <Esc>gqap:up<CR>gvzt
-nnoremap GG mmgqap{`m:up<CR>
+" nnoremap GG mmgqap{`m:up<CR>
+nnoremap GG gqapzt<CR>:up<CR>
 vnoremap G <Esc>gqap:up<CR>gvzt
 " FIXME: TEMPORARILY DISABLED ---v
 "" vnoremap GG <Esc>/^\s<CR>-o<Esc><CR>i0<Esc>gqap{dd:up<CR>:nohlsearch<CR>gvzt
