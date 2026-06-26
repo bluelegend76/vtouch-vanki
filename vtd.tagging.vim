@@ -220,6 +220,9 @@ nnoremap V :norm! V<CR>
 " Split current line
 "   at last space before 37
 nnoremap <Leader>R /\v^.{36}\zs.<CR>:nohl<CR>F s<CR><Esc>
+" Join current line with next + Run 'GlobalWordCoupler' from previous EOL-word
+nnoremap 8 <Leader>Jb@r
+" /\v^.{36}\zs.<CR>:nohl<CR>F s<CR><Esc>
 
   " start/activate v-mark (viw)
   nnoremap <Space> viw
